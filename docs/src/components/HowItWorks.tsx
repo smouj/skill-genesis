@@ -59,14 +59,22 @@ const steps = [
   },
 ]
 
+const colorRgb: Record<string, string> = {
+  '#8B00FF': '139,0,255',
+  '#FFD700': '255,215,0',
+  '#00FFCC': '0,255,204',
+  '#FF6B6B': '255,107,107',
+}
+
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-24 px-4 overflow-hidden">
+    <section id="how-it-works" className="relative py-28 px-4 overflow-hidden">
       {/* Background decoration */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(139,0,255,0.04), transparent)' }}
       />
+      <div className="section-divider absolute top-0 left-8 right-8" />
 
       <div className="max-w-5xl mx-auto">
         {/* Header */}
@@ -101,7 +109,7 @@ export default function HowItWorks() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 max-w-2xl mx-auto"
           >
-            Run <code className="text-purple-400">python3 skill_genesis.py</code> and watch the full pipeline execute automatically.
+            Run <code className="text-purple-400 bg-purple-900/20 px-1.5 py-0.5 rounded text-xs">python3 skill_genesis.py</code> and watch the full pipeline execute automatically.
           </motion.p>
         </div>
 
@@ -109,68 +117,75 @@ export default function HowItWorks() {
         <div className="relative">
           {/* Vertical line */}
           <div
-            className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px hidden sm:block"
-            style={{ background: 'linear-gradient(to bottom, #8B00FF, #FFD700, #8B00FF)', opacity: 0.3 }}
+            className="absolute left-1/2 top-0 bottom-0 w-px hidden md:block -translate-x-1/2"
+            style={{ background: 'linear-gradient(to bottom, transparent, #8B00FF 10%, #FFD700 50%, #8B00FF 90%, transparent)', opacity: 0.25 }}
           />
 
           <div className="space-y-10">
-            {steps.map((step, i) => (
-              <motion.div
-                key={step.number}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-100px' }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
-                className={`relative flex gap-6 md:gap-8 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-              >
-                {/* Number node (center on desktop) */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10">
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center font-black text-sm"
-                    style={{
-                      background: `radial-gradient(circle, ${step.color}30, #0A0A0A)`,
-                      border: `2px solid ${step.color}`,
-                      boxShadow: `0 0 20px ${step.color}50`,
-                      color: step.color,
-                    }}
-                  >
-                    {step.number}
-                  </div>
-                </div>
-
-                {/* Card */}
-                <div className={`flex-1 ${i % 2 === 0 ? 'md:pr-16' : 'md:pl-16'}`}>
-                  <div
-                    className="p-5 rounded-2xl card-hover"
-                    style={{
-                      background: 'rgba(255,255,255,0.02)',
-                      border: `1px solid ${step.color}25`,
-                    }}
-                  >
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-xs font-black px-2 py-0.5 rounded font-mono"
-                        style={{ background: `${step.color}20`, color: step.color }}
-                      >
-                        STEP {step.number}
-                      </span>
-                      <span className="text-xl">{step.icon}</span>
-                      <h3 className="text-white font-bold">{step.title}</h3>
-                    </div>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-4">{step.description}</p>
+            {steps.map((step, i) => {
+              const rgb = colorRgb[step.color] ?? '139,0,255'
+              return (
+                <motion.div
+                  key={step.number}
+                  initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: '-100px' }}
+                  transition={{ delay: i * 0.08, duration: 0.55 }}
+                  className={`relative flex gap-6 md:gap-8 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                >
+                  {/* Number node (center on desktop) */}
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10">
                     <div
-                      className="rounded-lg px-4 py-2.5 font-mono text-xs overflow-x-auto"
-                      style={{ background: 'rgba(0,0,0,0.5)', border: `1px solid ${step.color}20`, color: step.color }}
+                      className="w-12 h-12 rounded-full flex items-center justify-center font-black text-sm"
+                      style={{
+                        background: `radial-gradient(circle, rgba(${rgb},0.25), #0A0A0A)`,
+                        border: `2px solid ${step.color}`,
+                        boxShadow: `0 0 20px rgba(${rgb},0.4), 0 0 40px rgba(${rgb},0.15)`,
+                        color: step.color,
+                      }}
                     >
-                      {step.code}
+                      {step.number}
                     </div>
                   </div>
-                </div>
 
-                {/* Spacer for alternate layout */}
-                <div className="hidden md:block flex-1" />
-              </motion.div>
-            ))}
+                  {/* Card */}
+                  <div className={`flex-1 ${i % 2 === 0 ? 'md:pr-16' : 'md:pl-16'}`}>
+                    <div
+                      className="p-5 rounded-2xl card-hover group"
+                      style={{
+                        background: 'rgba(255,255,255,0.02)',
+                        border: `1px solid rgba(${rgb},0.2)`,
+                      }}
+                    >
+                      <div className="flex items-center gap-3 mb-3">
+                        <span
+                          className="text-xs font-black px-2 py-0.5 rounded font-mono tracking-wider"
+                          style={{ background: `rgba(${rgb},0.15)`, color: step.color }}
+                        >
+                          STEP {step.number}
+                        </span>
+                        <span className="text-xl">{step.icon}</span>
+                        <h3 className="text-white font-bold">{step.title}</h3>
+                      </div>
+                      <p className="text-gray-400 text-sm leading-relaxed mb-4">{step.description}</p>
+                      <div
+                        className="rounded-lg px-4 py-3 font-mono text-xs overflow-x-auto"
+                        style={{
+                          background: 'rgba(0,0,0,0.5)',
+                          border: `1px solid rgba(${rgb},0.15)`,
+                          color: step.color,
+                        }}
+                      >
+                        {step.code}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Spacer for alternate layout */}
+                  <div className="hidden md:block flex-1" />
+                </motion.div>
+              )
+            })}
           </div>
         </div>
 
@@ -180,10 +195,12 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-14 text-center p-6 rounded-2xl"
-          style={{ background: 'rgba(139,0,255,0.06)', border: '1px solid rgba(139,0,255,0.2)' }}
+          style={{ background: 'rgba(139,0,255,0.05)', border: '1px solid rgba(139,0,255,0.18)' }}
         >
           <p className="text-gray-300 text-sm">
-            💡 Use <code className="text-purple-400 text-xs bg-purple-900/20 px-1.5 py-0.5 rounded">--dry-run</code> flag to test the full pipeline without creating any GitHub repos or sending notifications.
+            💡 Use{' '}
+            <code className="text-purple-400 text-xs bg-purple-900/20 px-1.5 py-0.5 rounded">--dry-run</code>{' '}
+            flag to test the full pipeline without creating any GitHub repos or sending notifications.
           </p>
         </motion.div>
       </div>

@@ -119,11 +119,9 @@ export default function SkillsGallery() {
   const [hoveredSlug, setHoveredSlug] = useState<string | null>(null)
 
   return (
-    <section id="skills" className="relative py-24 px-4">
-      {/* Background */}
-      <div
-        className="absolute inset-0 pointer-events-none grid-bg opacity-30"
-      />
+    <section id="skills" className="relative py-28 px-4">
+      <div className="absolute inset-0 pointer-events-none grid-bg opacity-20" />
+      <div className="section-divider absolute top-0 left-8 right-8" />
 
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -162,87 +160,90 @@ export default function SkillsGallery() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-          {skills.map((skill, i) => (
-            <motion.div
-              key={skill.slug}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.06 }}
-              onMouseEnter={() => setHoveredSlug(skill.slug)}
-              onMouseLeave={() => setHoveredSlug(null)}
-              className="relative p-4 rounded-2xl cursor-default overflow-hidden"
-              style={{
-                background: hoveredSlug === skill.slug
-                  ? `radial-gradient(circle at top left, ${skill.color}15, rgba(255,255,255,0.03))`
-                  : 'rgba(255,255,255,0.02)',
-                border: `1px solid ${hoveredSlug === skill.slug ? skill.color + '50' : 'rgba(255,255,255,0.06)'}`,
-                transform: hoveredSlug === skill.slug ? 'translateY(-4px) scale(1.02)' : 'translateY(0) scale(1)',
-                transition: 'all 0.3s ease',
-                boxShadow: hoveredSlug === skill.slug ? `0 12px 40px ${skill.color}25` : 'none',
-              }}
-            >
-              {/* Emoji */}
-              <div
-                className="text-3xl mb-3 w-12 h-12 flex items-center justify-center rounded-xl"
-                style={{ background: `${skill.color}15`, border: `1px solid ${skill.color}30` }}
-              >
-                {skill.emoji}
-              </div>
-
-              {/* Name */}
-              <h3 className="text-white font-bold text-sm mb-1">{skill.name}</h3>
-
-              {/* Category badge */}
-              <div className="flex items-center gap-1.5 mb-3">
-                <span
-                  className="text-xs px-2 py-0.5 rounded-full"
-                  style={{
-                    background: `${categoryColors[skill.category] ?? skill.color}15`,
-                    color: categoryColors[skill.category] ?? skill.color,
-                    border: `1px solid ${categoryColors[skill.category] ?? skill.color}30`,
-                  }}
-                >
-                  {skill.category}
-                </span>
-                <span
-                  className="text-xs px-2 py-0.5 rounded-full"
-                  style={{ background: 'rgba(34,197,94,0.1)', color: '#22c55e', border: '1px solid rgba(34,197,94,0.2)' }}
-                >
-                  {skill.status}
-                </span>
-              </div>
-
-              {/* Description (visible on hover) */}
-              <div
+          {skills.map((skill, i) => {
+            const isHovered = hoveredSlug === skill.slug
+            const catColor = categoryColors[skill.category] ?? skill.color
+            return (
+              <motion.div
+                key={skill.slug}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                onMouseEnter={() => setHoveredSlug(skill.slug)}
+                onMouseLeave={() => setHoveredSlug(null)}
+                className="relative p-4 rounded-2xl cursor-default overflow-hidden"
                 style={{
-                  maxHeight: hoveredSlug === skill.slug ? '100px' : '0',
-                  overflow: 'hidden',
-                  transition: 'max-height 0.4s ease, opacity 0.3s ease',
-                  opacity: hoveredSlug === skill.slug ? 1 : 0,
+                  background: isHovered
+                    ? `radial-gradient(circle at top left, ${skill.color}12, rgba(255,255,255,0.03))`
+                    : 'rgba(255,255,255,0.02)',
+                  border: `1px solid ${isHovered ? skill.color + '45' : 'rgba(255,255,255,0.06)'}`,
+                  transform: isHovered ? 'translateY(-5px) scale(1.02)' : 'translateY(0) scale(1)',
+                  transition: 'all 0.28s ease',
+                  boxShadow: isHovered ? `0 16px 48px ${skill.color}20` : 'none',
                 }}
               >
-                <p className="text-gray-400 text-xs leading-relaxed mb-3">{skill.description}</p>
-                <div className="flex flex-wrap gap-1">
-                  {skill.tags.slice(0, 3).map((tag) => (
-                    <span key={tag} className="text-xs text-gray-500">#{tag}</span>
-                  ))}
+                <div
+                  className="text-2xl mb-3 w-11 h-11 flex items-center justify-center rounded-xl transition-transform duration-300"
+                  style={{
+                    background: `${skill.color}12`,
+                    border: `1px solid ${skill.color}25`,
+                    transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+                  }}
+                >
+                  {skill.emoji}
                 </div>
-              </div>
 
-              {/* Repo link */}
-              <a
-                href={`https://github.com/smouj/${skill.slug}-skill`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 text-xs flex items-center gap-1 transition-colors"
-                style={{ color: hoveredSlug === skill.slug ? skill.color : '#4b5563' }}
-              >
-                <span>→</span>
-                <span>/{skill.slug}-skill</span>
-              </a>
-            </motion.div>
-          ))}
+                <h3 className="text-white font-bold text-sm mb-1.5">{skill.name}</h3>
+
+                <div className="flex items-center gap-1.5 mb-3 flex-wrap">
+                  <span
+                    className="text-xs px-2 py-0.5 rounded-full"
+                    style={{
+                      background: `${catColor}12`,
+                      color: catColor,
+                      border: `1px solid ${catColor}25`,
+                    }}
+                  >
+                    {skill.category}
+                  </span>
+                  <span
+                    className="text-xs px-2 py-0.5 rounded-full"
+                    style={{ background: 'rgba(34,197,94,0.08)', color: '#22c55e', border: '1px solid rgba(34,197,94,0.18)' }}
+                  >
+                    {skill.status}
+                  </span>
+                </div>
+
+                <div
+                  style={{
+                    maxHeight: isHovered ? '100px' : '0',
+                    overflow: 'hidden',
+                    transition: 'max-height 0.35s ease, opacity 0.25s ease',
+                    opacity: isHovered ? 1 : 0,
+                  }}
+                >
+                  <p className="text-gray-400 text-xs leading-relaxed mb-2">{skill.description}</p>
+                  <div className="flex flex-wrap gap-1">
+                    {skill.tags.slice(0, 3).map((tag) => (
+                      <span key={tag} className="text-xs" style={{ color: '#4b5563' }}>#{tag}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <a
+                  href={`https://github.com/smouj/${skill.slug}-skill`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 text-xs flex items-center gap-1 transition-all duration-200"
+                  style={{ color: isHovered ? skill.color : '#374151' }}
+                >
+                  <span>→</span>
+                  <span>/{skill.slug}-skill</span>
+                </a>
+              </motion.div>
+            )
+          })}
         </div>
 
         {/* Command hint */}
@@ -254,9 +255,14 @@ export default function SkillsGallery() {
         >
           <p className="text-gray-500 text-sm mb-3">Generate your next skill with a single command:</p>
           <div
-            className="inline-block px-6 py-3 rounded-xl font-mono text-sm"
-            style={{ background: 'rgba(0,0,0,0.6)', border: '1px solid rgba(139,0,255,0.3)', color: '#a855f7' }}
+            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl font-mono text-sm"
+            style={{
+              background: 'rgba(0,0,0,0.6)',
+              border: '1px solid rgba(139,0,255,0.25)',
+              color: '#a855f7',
+            }}
           >
+            <span style={{ color: '#22c55e' }}>$</span>
             python3 skill_genesis.py
           </div>
         </motion.div>

@@ -71,7 +71,7 @@ function StarRating({ count }: { count: number }) {
 
 export default function Testimonials() {
   return (
-    <section className="relative py-24 px-4 overflow-hidden">
+    <section className="relative py-28 px-4 overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 pointer-events-none"

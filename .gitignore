@@ -1,0 +1,18 @@
+# Next.js build output and cache
+docs/.next/
+
+# Node modules
+docs/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
