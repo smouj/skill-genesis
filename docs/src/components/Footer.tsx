@@ -12,8 +12,8 @@ const links = {
   Community: [
     { label: 'OpenClaw Ecosystem', href: 'https://github.com/smouj' },
     { label: 'Skills-Hub', href: 'https://github.com/smouj/Skills-Hub' },
-    { label: 'Discord (Coming)', href: '#' },
-    { label: 'Telegram Bot (Coming)', href: '#' },
+    { label: 'Discord (Coming Soon)', href: '#' },
+    { label: 'Telegram Bot (Coming Soon)', href: '#' },
   ],
   Developer: [
     { label: 'Contributing Guide', href: 'https://github.com/smouj/skill-genesis/blob/main/CONTRIBUTING.md' },
@@ -25,16 +25,16 @@ const links = {
 
 export default function Footer() {
   return (
-    <footer className="relative pt-20 pb-10 px-4 border-t" style={{ borderColor: 'rgba(139,0,255,0.15)' }}>
+    <footer className="relative pt-20 pb-10 px-4" style={{ borderTop: '1px solid rgba(139,0,255,0.12)' }}>
       {/* Background */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 80% 40% at 50% 100%, rgba(139,0,255,0.05), transparent)' }}
+        style={{ background: 'radial-gradient(ellipse 80% 40% at 50% 100%, rgba(139,0,255,0.04), transparent)' }}
       />
 
       <div className="max-w-6xl mx-auto">
         {/* Main grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-14">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
@@ -65,7 +65,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg flex items-center justify-center text-sm transition-all hover:scale-110"
-                style={{ background: 'rgba(139,0,255,0.15)', border: '1px solid rgba(139,0,255,0.3)', color: '#a855f7' }}
+                style={{ background: 'rgba(139,0,255,0.12)', border: '1px solid rgba(139,0,255,0.28)', color: '#a855f7' }}
                 aria-label="GitHub"
               >
                 ★
@@ -75,7 +75,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg flex items-center justify-center text-sm transition-all hover:scale-110"
-                style={{ background: 'rgba(255,215,0,0.1)', border: '1px solid rgba(255,215,0,0.2)', color: '#FFD700' }}
+                style={{ background: 'rgba(255,215,0,0.08)', border: '1px solid rgba(255,215,0,0.18)', color: '#FFD700' }}
                 aria-label="OpenClaw"
               >
                 ⚡
@@ -99,13 +99,9 @@ export default function Footer() {
                       href={link.href}
                       target={link.href.startsWith('http') ? '_blank' : undefined}
                       rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="text-gray-500 hover:text-gray-300 text-sm transition-colors relative group"
+                      className="text-gray-500 hover:text-gray-300 text-sm transition-colors animated-underline"
                     >
                       {link.label}
-                      <span
-                        className="absolute -bottom-0.5 left-0 w-0 h-px group-hover:w-full transition-all duration-300"
-                        style={{ background: '#8B00FF' }}
-                      />
                     </a>
                   </li>
                 ))}
@@ -114,39 +110,41 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Live Demo Banner */}
+        {/* Get Started Banner */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="p-4 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-3 mb-10"
+          className="p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 mb-10"
           style={{
-            background: 'linear-gradient(135deg, rgba(139,0,255,0.1), rgba(255,215,0,0.06))',
-            border: '1px solid rgba(139,0,255,0.2)',
+            background: 'linear-gradient(135deg, rgba(139,0,255,0.08), rgba(255,215,0,0.04))',
+            border: '1px solid rgba(139,0,255,0.18)',
           }}
         >
           <div className="flex items-center gap-3">
-            <span className="text-2xl">🌐</span>
+            <span className="text-2xl">⚡</span>
             <div>
-              <p className="text-white font-bold text-sm">Live Demo</p>
-              <p className="text-gray-400 text-xs">View the landing page on GitHub Pages</p>
+              <p className="text-white font-bold text-sm">Start generating skills today</p>
+              <p className="text-gray-400 text-xs">One Python command. Full autonomous pipeline.</p>
             </div>
           </div>
           <a
-            href="https://smouj.github.io/skill-genesis"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg text-xs font-bold transition-all hover:scale-105 flex-shrink-0"
-            style={{ background: 'rgba(139,0,255,0.25)', border: '1px solid rgba(139,0,255,0.4)', color: '#a855f7' }}
+            href="#quick-start"
+            className="px-5 py-2.5 rounded-xl text-xs font-bold transition-all hover:scale-105 flex-shrink-0"
+            style={{
+              background: 'linear-gradient(135deg, #8B00FF, #6600CC)',
+              color: 'white',
+              boxShadow: '0 0 15px rgba(139,0,255,0.35)',
+            }}
           >
-            smouj.github.io/skill-genesis →
+            Quick Start →
           </a>
         </motion.div>
 
         {/* Bottom bar */}
         <div
           className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}
+          style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}
         >
           <p className="text-gray-600 text-xs">
             © 2026 <span style={{ color: '#8B00FF' }}>smouj</span> · OpenClaw Ecosystem · MIT License

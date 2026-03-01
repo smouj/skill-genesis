@@ -71,6 +71,13 @@ const features = [
   },
 ]
 
+const colorRgb: Record<string, string> = {
+  '#8B00FF': '139,0,255',
+  '#FFD700': '255,215,0',
+  '#00FFCC': '0,255,204',
+  '#FF6B6B': '255,107,107',
+}
+
 function FeatureCard({
   feature,
   index,
@@ -78,41 +85,55 @@ function FeatureCard({
   feature: (typeof features)[0]
   index: number
 }) {
+  const rgb = colorRgb[feature.color] ?? '139,0,255'
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.08, duration: 0.6 }}
-      whileHover={{ scale: 1.03, y: -4 }}
-      className="relative p-6 rounded-2xl cursor-default overflow-hidden"
+      transition={{ delay: index * 0.07, duration: 0.5 }}
+      whileHover={{ scale: 1.02, y: -4 }}
+      className="relative p-6 rounded-2xl cursor-default overflow-hidden group"
       style={{
         background: 'rgba(255,255,255,0.02)',
-        border: `1px solid rgba(${feature.color === '#8B00FF' ? '139,0,255' : feature.color === '#FFD700' ? '255,215,0' : feature.color === '#00FFCC' ? '0,255,204' : '255,107,107'},0.2)`,
+        border: `1px solid rgba(${rgb},0.18)`,
         transition: 'all 0.3s ease',
       }}
     >
       {/* Glow corner */}
       <div
-        className="absolute top-0 right-0 w-24 h-24 pointer-events-none"
+        className="absolute top-0 right-0 w-32 h-32 pointer-events-none transition-opacity duration-300"
         style={{
           background: `radial-gradient(circle at top right, ${feature.color}18, transparent 70%)`,
         }}
       />
+      {/* Bottom glow on hover */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-px pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={{ background: `linear-gradient(90deg, transparent, ${feature.color}60, transparent)` }}
+      />
 
       <div className="flex items-start gap-4">
         <div
-          className="text-3xl w-12 h-12 flex items-center justify-center rounded-xl flex-shrink-0"
-          style={{ background: `${feature.color}18`, border: `1px solid ${feature.color}30` }}
+          className="text-2xl w-11 h-11 flex items-center justify-center rounded-xl flex-shrink-0 transition-all duration-300 group-hover:scale-110"
+          style={{
+            background: `rgba(${rgb},0.1)`,
+            border: `1px solid rgba(${rgb},0.25)`,
+            boxShadow: `0 0 20px rgba(${rgb},0.1)`,
+          }}
         >
           {feature.icon}
         </div>
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-2">
-            <h3 className="text-white font-bold text-sm md:text-base">{feature.title}</h3>
+          <div className="flex items-center gap-2 mb-2 flex-wrap">
+            <h3 className="text-white font-bold text-sm">{feature.title}</h3>
             <span
-              className="text-xs px-2 py-0.5 rounded-full font-medium flex-shrink-0"
-              style={{ background: `${feature.color}20`, color: feature.color, border: `1px solid ${feature.color}40` }}
+              className="text-xs px-2 py-0.5 rounded-full font-semibold flex-shrink-0"
+              style={{
+                background: `rgba(${rgb},0.12)`,
+                color: feature.color,
+                border: `1px solid rgba(${rgb},0.3)`,
+              }}
             >
               {feature.badge}
             </span>
@@ -129,7 +150,10 @@ export default function Features() {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <section id="features" className="relative py-24 px-4">
+    <section id="features" className="relative py-28 px-4">
+      {/* Subtle top divider */}
+      <div className="section-divider mb-0 absolute top-0 left-8 right-8" />
+
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div ref={ref} className="text-center mb-16">
@@ -137,7 +161,7 @@ export default function Features() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs uppercase tracking-widest mb-4"
-            style={{ border: '1px solid rgba(139,0,255,0.3)', color: '#8B00FF', background: 'rgba(139,0,255,0.06)' }}
+            style={{ border: '1px solid rgba(139,0,255,0.3)', color: '#a855f7', background: 'rgba(139,0,255,0.06)' }}
           >
             <span>⚡</span> Features
           </motion.div>
@@ -162,8 +186,8 @@ export default function Features() {
           </motion.p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-4">
+        {/* Grid — 2 cols md, 4 cols xl */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
           {features.map((feature, i) => (
             <FeatureCard key={feature.title} feature={feature} index={i} />
           ))}
@@ -179,7 +203,11 @@ export default function Features() {
           <a
             href="#quick-start"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:scale-105"
-            style={{ background: 'rgba(139,0,255,0.15)', border: '1px solid rgba(139,0,255,0.4)', color: '#a855f7' }}
+            style={{
+              background: 'rgba(139,0,255,0.12)',
+              border: '1px solid rgba(139,0,255,0.35)',
+              color: '#a855f7',
+            }}
           >
             See it in action →
           </a>

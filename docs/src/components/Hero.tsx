@@ -21,7 +21,7 @@ const SKILL_NAMES = ['/seo-audit', '/code-review', '/security-scan', '/test-gen'
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const particlesRef = useRef<Particle[]>([])
-  const frameRef = useRef<number>()
+  const frameRef = useRef<number>(undefined)
   const [, forceRender] = useState(0)
 
   useEffect(() => {
@@ -79,7 +79,6 @@ export default function Hero() {
       const cy = canvas.height * 0.38
       spawnParticles(cx, cy)
 
-      // Keep particle count manageable
       if (particlesRef.current.length > 200) {
         particlesRef.current = particlesRef.current.slice(-150)
       }
@@ -116,7 +115,6 @@ export default function Hero() {
         ctx.restore()
       })
 
-      // Connecting lines
       const pts = particlesRef.current.filter((p) => !p.text)
       for (let i = 0; i < pts.length; i += 2) {
         for (let j = i + 1; j < Math.min(i + 8, pts.length); j++) {
@@ -204,7 +202,6 @@ export default function Hero() {
                   </feMerge>
                 </filter>
               </defs>
-              {/* Center claw */}
               <path
                 d="M100 10 C85 30, 72 55, 78 95 C81 115, 72 138, 56 162 C66 155, 80 142, 84 124 C87 145, 82 168, 70 185 C83 173, 94 155, 93 132 C96 152, 94 170, 88 188 C100 172, 105 150, 102 128 C106 148, 106 169, 100 188 C115 168, 117 145, 110 122 C116 142, 116 165, 110 183 C122 158, 123 132, 113 108 C126 72, 118 35, 100 10Z"
                 fill="url(#heroClawGrad)"
@@ -212,12 +209,10 @@ export default function Hero() {
                 strokeWidth="1.5"
                 filter="url(#glow)"
               />
-              {/* Knuckle details */}
               <ellipse cx="100" cy="55" rx="18" ry="10" fill="rgba(139,0,255,0.3)" />
               <ellipse cx="100" cy="35" rx="12" ry="7" fill="rgba(255,215,0,0.2)" />
             </svg>
 
-            {/* Glow rings around claw */}
             <div
               className="absolute inset-0 rounded-full pulse-ring pointer-events-none"
               style={{ background: 'radial-gradient(circle, rgba(139,0,255,0.3), transparent)', transform: 'scale(1.5)' }}
@@ -300,7 +295,7 @@ export default function Hero() {
             }}
           >
             <span>⚡</span>
-            Probar ahora (1 minuto)
+            Get Started (1 min)
           </a>
           <a
             href="https://github.com/smouj/skill-genesis"
@@ -314,7 +309,7 @@ export default function Hero() {
             }}
           >
             <span>★</span>
-            Ver en GitHub
+            Star on GitHub
           </a>
         </motion.div>
 
