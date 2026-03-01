@@ -2,9 +2,9 @@
 
 # ⚡ OpenClaw Skill Genesis
 
-### AI-Powered Autonomous Skill Generator for the OpenClaw Ecosystem
-
 <img width="982" height="451" alt="image" src="https://github.com/user-attachments/assets/df257877-1ccb-489a-9a6d-c46af51299c7" />
+
+### AI-Powered Autonomous Skill Generator for the OpenClaw Ecosystem
 
 <br/>
 
