@@ -1,5 +1,7 @@
-# Next.js build output and cache
+# Next.js build cache and intermediate output
 docs/.next/
+docs/dist/
+docs/out/
 
 # Node modules
 docs/node_modules/

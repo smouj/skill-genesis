@@ -46,7 +46,7 @@ jobs:
 
       - name: Add .nojekyll to output
         run: |
-          touch docs/out/.nojekyll
+          touch docs/dist/.nojekyll
           echo "✅ .nojekyll created"
 
       - name: Setup GitHub Pages
@@ -55,7 +55,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/out
+          path: ./docs/dist
 
   deploy:
     name: Deploy to GitHub Pages

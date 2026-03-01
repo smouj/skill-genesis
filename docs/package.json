@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "next build && touch out/.nojekyll && echo 'Deploy ready — copy /out to GitHub Pages'"
+    "deploy": "next build && touch dist/.nojekyll && cp -r dist/. .. && echo 'Deployed: dist/ → docs/ root and root /'"
   },
   "dependencies": {
     "next": "^15.1.0",
