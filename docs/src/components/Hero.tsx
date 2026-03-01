@@ -354,9 +354,12 @@ export default function Hero() {
       {/* Scroll indicator */}
       <motion.a
         href="#features"
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{ delay: 2.5, repeat: Infinity, duration: 2 }}
+        transition={{
+          opacity: { delay: 2.5, duration: 0.8 },
+          y: { delay: 3.3, repeat: Infinity, repeatType: 'loop', duration: 2, ease: 'easeInOut' },
+        }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-600 hover:text-gray-400 transition-colors text-xs flex flex-col items-center gap-2"
       >
         <span>SCROLL</span>

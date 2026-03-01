@@ -70,12 +70,14 @@ export default function InteractiveDemo() {
 
     setRunning(false)
     setDone(true)
+    setThinkingDots('')
   }
 
   const resetDemo = () => {
     setLines([])
     setDone(false)
     setRunning(false)
+    setThinkingDots('')
   }
 
   return (
