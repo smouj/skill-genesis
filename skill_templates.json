@@ -1,0 +1,122 @@
+{
+  "context-engineering": {
+    "name": "Context Engineer",
+    "category": "ai",
+    "purpose": "Design and optimize context for AI agents to maximize effectiveness in long tasks",
+    "triggers": "user mentions context, prompt optimization, reducing hallucinations, context window",
+    "rules": "Extract key info, prioritize recent items, use structured format, validate context completeness",
+    "examples": "Optimize prompt for coding agent, reduce token usage, structure user requirements"
+  },
+  "agent-orchestration": {
+    "name": "Agent Orchestrator",
+    "category": "ai",
+    "purpose": "Design and coordinate multi-agent systems with role assignment and communication",
+    "triggers": "user mentions multi-agent, CrewAI, AutoGen, LangGraph, agent teams",
+    "rules": "Define clear roles, establish communication protocol, handle conflicts, maintain state",
+    "examples": "Setup CrewAI team, create agent collaboration, orchestrate specialist agents"
+  },
+  "rag-knowledge": {
+    "name": "RAG Specialist",
+    "category": "ai",
+    "purpose": "Build retrieval-augmented generation systems with knowledge bases",
+    "triggers": "user mentions RAG, vector database, knowledge base, embeddings, Pinecone, Chroma",
+    "rules": "Chunk documents smartly, optimize embeddings, handle updates, validate retrieval",
+    "examples": "Create vector knowledge base, implement semantic search, connect to agent"
+  },
+  "tool-calling": {
+    "name": "Tool Calling Expert",
+    "category": "coding",
+    "purpose": "Implement function calling and tool integration for AI agents",
+    "triggers": "user mentions function calling, tool use, MCP, API integration, OpenAI functions",
+    "rules": "Define clear schemas, handle errors gracefully, validate inputs, maintain state",
+    "examples": "Add custom tools to Claude, create MCP server, implement function calling"
+  },
+  "memory-management": {
+    "name": "Memory Manager",
+    "category": "ai",
+    "purpose": "Implement short-term, long-term, and vector memory for AI agents",
+    "triggers": "user mentions memory, persistent context, vector store, session history",
+    "rules": "Prioritize relevant memories, prune old data, encrypt sensitive info, test recall",
+    "examples": "Add conversation memory, setup Redis cache, implement vector memory"
+  },
+  "eval-debugging": {
+    "name": "Agent Evaluator",
+    "category": "ai",
+    "purpose": "Build evaluation frameworks and debug AI agents with evals and tracing",
+    "triggers": "user mentions evals, testing agents, debugging, tracing, LangSmith, Helicone",
+    "rules": "Define success metrics, track costs, measure latency, identify failure modes",
+    "examples": "Create eval suite, setup tracing, debug agent failures, measure accuracy"
+  },
+  "workflow-automation": {
+    "name": "Workflow Automator",
+    "category": "automation",
+    "purpose": "Build AI-powered workflows with n8n, Zapier, or Make.com",
+    "triggers": "user mentions automation, n8n, Zapier, workflow, business processes",
+    "rules": "Design fault-tolerant flows, handle rate limits, log all actions, rollback capability",
+    "examples": "Create AI-powered automations, connect APIs, build business workflows"
+  },
+  "multimodal-agent": {
+    "name": "Multimodal Agent",
+    "category": "ai",
+    "purpose": "Build agents that understand and process text, image, audio, and video",
+    "triggers": "user mentions multimodal, vision, audio processing, image analysis, video understanding",
+    "rules": "Handle different input types, optimize for cost, fallback to text-only",
+    "examples": "Analyze images with agent, process audio, extract video frames"
+  },
+  "code-review-agent": {
+    "name": "Code Review Agent",
+    "category": "coding",
+    "purpose": "Automated code security review and vulnerability detection",
+    "triggers": "user mentions code review, security scan, vulnerability, SAST, code analysis",
+    "rules": "Non-destructive, detailed reports, prioritize critical issues, suggest fixes",
+    "examples": "Find SQL injection, detect secrets, analyze dependencies"
+  },
+  "git-automation": {
+    "name": "Git Automator",
+    "category": "devops",
+    "purpose": "Automate Git operations: commits, branches, PRs, and repository management",
+    "triggers": "user mentions git, commit, PR, branch, auto-commit, repository management",
+    "rules": "Descriptive messages, follow conventions, never force push to main, atomic commits",
+    "examples": "Auto-create PRs, commit changes, manage branches, setup CI"
+  },
+  "database-agent": {
+    "name": "Database Agent",
+    "category": "devops",
+    "purpose": "Execute SQL/NoSQL queries and manage databases through natural language",
+    "triggers": "user mentions database, SQL, query, postgres, mongo, data retrieval",
+    "rules": "Read-only by default, validate queries, backup before write, explain plan",
+    "examples": "Query database, analyze schema, optimize queries, migrate data"
+  },
+  "browser-automation": {
+    "name": "Browser Automator",
+    "category": "automation",
+    "purpose": "Navigate, scrape, and control web browsers programmatically",
+    "triggers": "user mentions browser, web scraping, automation, Playwright, Selenium",
+    "rules": "Respect robots.txt, rate limit, handle CAPTCHAs, clean up sessions",
+    "examples": "Fill forms, extract data, take screenshots, test web apps"
+  },
+  "shell-executor": {
+    "name": "Shell Executor",
+    "category": "devops",
+    "purpose": "Execute terminal commands safely with validation and rollback",
+    "triggers": "user mentions terminal, shell, bash, command line, execute",
+    "rules": "Validate commands, capture output, handle errors, never sudo without confirmation",
+    "examples": "Run build commands, execute scripts, manage files, system admin"
+  },
+  "frontend-expert": {
+    "name": "Frontend Expert",
+    "category": "coding",
+    "purpose": "Build modern web apps with React, Next.js, and Vercel best practices",
+    "triggers": "user mentions React, Next.js, frontend, Vercel, web development",
+    "rules": "Follow Vercel patterns, optimize performance, accessible, responsive",
+    "examples": "Create Next.js app, optimize Core Web Vitals, implement components"
+  },
+  "tdd-developer": {
+    "name": "TDD Developer",
+    "category": "coding",
+    "purpose": "Test-driven development with comprehensive test coverage",
+    "triggers": "user mentions TDD, testing, test coverage, pytest, jest, unit tests",
+    "rules": "Write tests first, high coverage, edge cases, maintainable tests",
+    "examples": "Create test suite, add unit tests, implement integration tests"
+  }
+}
