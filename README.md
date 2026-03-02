@@ -179,6 +179,13 @@ gh pr create --title "feat: my improvement"
 
 ---
 
+
+## 🔔 Telegram Alerts
+
+<img width="446" height="459" alt="Captura de pantalla (940)" src="https://github.com/user-attachments/assets/54fe0bfe-55f3-46a4-8c89-abb945a32fd0" />
+
+---
+
 ## 🗺 Roadmap 2026
 
 | Quarter | Feature | Status |
