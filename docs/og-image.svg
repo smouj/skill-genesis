@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A"/>
+      <stop offset="50%" stop-color="#1a0033"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B00FF"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#8B00FF"/>
+    </linearGradient>
+    <linearGradient id="clawGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="50%" stop-color="#8B00FF"/>
+      <stop offset="100%" stop-color="#4B0082"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.06" stroke="#8B00FF" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="60" y1="0" x2="60" y2="630"/>
+    <line x1="120" y1="0" x2="120" y2="630"/>
+    <line x1="240" y1="0" x2="240" y2="630"/>
+    <line x1="360" y1="0" x2="360" y2="630"/>
+    <line x1="480" y1="0" x2="480" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/>
+    <line x1="840" y1="0" x2="840" y2="630"/>
+    <line x1="960" y1="0" x2="960" y2="630"/>
+    <line x1="1080" y1="0" x2="1080" y2="630"/>
+  </g>
+
+  <!-- Glow radial -->
+  <radialGradient id="radGlow" cx="30%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#8B00FF" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#8B00FF" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1200" height="630" fill="url(#radGlow)"/>
+
+  <!-- Dragon Claw (left side) -->
+  <g transform="translate(100, 150) scale(1.5)" filter="url(#glow)">
+    <path d="M80 10 C65 28, 52 50, 58 85 C61 103, 53 122, 40 140 C50 134, 62 122, 65 106 C68 124, 64 143, 54 158 C65 147, 73 130, 72 110 C75 130, 73 148, 67 165 C77 149, 80 130, 77 110 C81 130, 80 149, 75 165 C84 147, 86 126, 82 106 C89 126, 89 147, 84 163 C95 140, 94 115, 85 93 C97 62, 90 28, 75 10 Z"
+          fill="url(#clawGrad)" stroke="#8B00FF" stroke-width="1.5" opacity="0.9"/>
+    <ellipse cx="75" cy="45" rx="15" ry="8" fill="rgba(139,0,255,0.25)"/>
+    <ellipse cx="75" cy="28" rx="10" ry="6" fill="rgba(255,215,0,0.15)"/>
+  </g>
+
+  <!-- Particle dots -->
+  <circle cx="320" cy="180" r="4" fill="#8B00FF" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="380" cy="240" r="3" fill="#FFD700" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="290" cy="310" r="5" fill="#8B00FF" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="350" cy="370" r="2" fill="#FFD700" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="1050" cy="150" r="4" fill="#8B00FF" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="1100" cy="220" r="3" fill="#FFD700" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="1080" cy="480" r="5" fill="#8B00FF" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- Skill tags floating -->
+  <g font-family="Courier New, monospace" font-size="13" opacity="0.4">
+    <text x="310" y="175" fill="#8B00FF">/seo-audit</text>
+    <text x="340" y="380" fill="#FFD700">/code-review</text>
+    <text x="1020" y="200" fill="#8B00FF">/security-scan</text>
+    <text x="1020" y="460" fill="#FFD700">/cloud-deploy</text>
+  </g>
+
+  <!-- Main title: SKILL -->
+  <text x="420" y="270"
+        font-family="Arial Black, sans-serif"
+        font-size="140"
+        font-weight="900"
+        fill="#FFD700"
+        filter="url(#textGlow)"
+        letter-spacing="-4">SKILL</text>
+
+  <!-- Main title: GENESIS -->
+  <text x="420" y="420"
+        font-family="Arial Black, sans-serif"
+        font-size="110"
+        font-weight="900"
+        fill="url(#titleGrad)"
+        filter="url(#textGlow)"
+        letter-spacing="-3">GENESIS</text>
+
+  <!-- Subtitle -->
+  <text x="422" y="468"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        fill="#9ca3af"
+        letter-spacing="1">AI-Powered Autonomous Skill Generator · OpenClaw Ecosystem</text>
+
+  <!-- Badge bar -->
+  <g transform="translate(420, 500)">
+    <rect x="0" y="0" width="130" height="32" rx="16" fill="rgba(139,0,255,0.2)" stroke="#8B00FF" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="65" y="21" font-family="Arial, sans-serif" font-size="13" fill="#a855f7" text-anchor="middle" font-weight="600">Kilo AI Powered</text>
+
+    <rect x="145" y="0" width="120" height="32" rx="16" fill="rgba(255,215,0,0.12)" stroke="#FFD700" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="205" y="21" font-family="Arial, sans-serif" font-size="13" fill="#FFD700" text-anchor="middle" font-weight="600">OpenClaw Ready</text>
+
+    <rect x="280" y="0" width="100" height="32" rx="16" fill="rgba(34,197,94,0.12)" stroke="#22c55e" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="330" y="21" font-family="Arial, sans-serif" font-size="13" fill="#22c55e" text-anchor="middle" font-weight="600">MIT License</text>
+  </g>
+
+  <!-- GitHub URL -->
+  <text x="600" y="590"
+        font-family="Courier New, monospace"
+        font-size="16"
+        fill="#374151"
+        text-anchor="middle">github.com/smouj/skill-genesis</text>
+
+  <!-- Bottom border -->
+  <rect x="0" y="620" width="1200" height="10" fill="url(#titleGrad)" opacity="0.6"/>
+</svg>
