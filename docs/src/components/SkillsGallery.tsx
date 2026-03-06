@@ -1,110 +1,18 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-const skills = [
-  {
-    slug: 'seo-audit',
-    name: 'SEO Audit',
-    category: 'seo',
-    emoji: '🔍',
-    description: 'Analyzes websites for technical SEO issues — Core Web Vitals, meta tags, sitemap, robots.txt.',
-    tags: ['audit', 'keywords', 'ranking', 'lighthouse'],
-    color: '#8B00FF',
-    status: 'Ready',
-  },
-  {
-    slug: 'code-review',
-    name: 'Code Review',
-    category: 'coding',
-    emoji: '💻',
-    description: 'Comprehensive code review covering quality, security vulnerabilities, and best practices.',
-    tags: ['review', 'quality', 'security', 'lint'],
-    color: '#FFD700',
-    status: 'Ready',
-  },
-  {
-    slug: 'db-optimize',
-    name: 'DB Optimizer',
-    category: 'devops',
-    emoji: '🗄',
-    description: 'Optimizes PostgreSQL queries, indexes, and schema for maximum performance.',
-    tags: ['database', 'postgres', 'queries', 'performance'],
-    color: '#00FFCC',
-    status: 'Ready',
-  },
-  {
-    slug: 'security-scan',
-    name: 'Security Scanner',
-    category: 'security',
-    emoji: '🛡',
-    description: 'Scans for security vulnerabilities using nmap, trivy, bandit and industry-standard tools.',
-    tags: ['security', 'CVE', 'scan', 'hardening'],
-    color: '#FF6B6B',
-    status: 'Ready',
-  },
-  {
-    slug: 'api-docs',
-    name: 'API Docs',
-    category: 'writing',
-    emoji: '📖',
-    description: 'Generates OpenAPI 3.0 / Swagger documentation from code with real endpoint examples.',
-    tags: ['api', 'openapi', 'swagger', 'docs'],
-    color: '#8B00FF',
-    status: 'Ready',
-  },
-  {
-    slug: 'test-gen',
-    name: 'Test Generator',
-    category: 'coding',
-    emoji: '🧪',
-    description: 'Creates unit and integration tests from existing code — Jest, Pytest, Vitest support.',
-    tags: ['tests', 'coverage', 'jest', 'pytest'],
-    color: '#FFD700',
-    status: 'Ready',
-  },
-  {
-    slug: 'log-analyze',
-    name: 'Log Analyzer',
-    category: 'analysis',
-    emoji: '📊',
-    description: 'Parses application logs to identify errors, anomalies, and performance patterns.',
-    tags: ['logs', 'errors', 'debugging', 'metrics'],
-    color: '#00FFCC',
-    status: 'Ready',
-  },
-  {
-    slug: 'backup-manager',
-    name: 'Backup Manager',
-    category: 'devops',
-    emoji: '💾',
-    description: 'Manages automated backup schedules, restoration procedures, and data integrity checks.',
-    tags: ['backup', 'restore', 'schedule', 'automate'],
-    color: '#FF6B6B',
-    status: 'Ready',
-  },
-  {
-    slug: 'perf-monitor',
-    name: 'Perf Monitor',
-    category: 'devops',
-    emoji: '📈',
-    description: 'Monitors CPU, memory, disk, and network metrics with alerting thresholds.',
-    tags: ['performance', 'cpu', 'memory', 'monitor'],
-    color: '#8B00FF',
-    status: 'Ready',
-  },
-  {
-    slug: 'cloud-deploy',
-    name: 'Cloud Deployer',
-    category: 'devops',
-    emoji: '☁',
-    description: 'Deploys to AWS, GCP, and Azure with Docker and Kubernetes orchestration support.',
-    tags: ['deploy', 'cloud', 'aws', 'kubernetes'],
-    color: '#FFD700',
-    status: 'Ready',
-  },
-]
+interface Skill {
+  slug: string
+  name: string
+  category: string
+  emoji: string
+  description: string
+  tags: string[]
+  color: string
+  status: string
+}
 
 const categoryColors: Record<string, string> = {
   seo: '#8B00FF',
@@ -115,8 +23,90 @@ const categoryColors: Record<string, string> = {
   analysis: '#A29BFE',
 }
 
+const defaultEmojis: Record<string, string> = {
+  seo: '🔍',
+  coding: '💻',
+  devops: '🛠',
+  security: '🛡',
+  writing: '📖',
+  analysis: '📊',
+}
+
 export default function SkillsGallery() {
+  const [skills, setSkills] = useState<Skill[]>([])
   const [hoveredSlug, setHoveredSlug] = useState<string | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function fetchSkills() {
+      try {
+        const response = await fetch('https://api.github.com/users/smouj/repos?per_page=100&sort=updated')
+        const repos = await response.json()
+        
+        const skillRepos = repos
+          .filter((r: any) => r.name.endsWith('-skill') && !r.fork)
+          .map((repo: any) => {
+            const slug = repo.name.replace('-skill', '')
+            const category = detectCategory(slug)
+            return {
+              slug,
+              name: formatName(slug),
+              category,
+              emoji: defaultEmojis[category] || '⚡',
+              description: repo.description || `"${slug} skill for OpenClaw"`,
+              tags: [category, 'openclaw', 'skill'],
+              color: categoryColors[category] || '#8B00FF',
+              status: 'Ready',
+            }
+          })
+        
+        setSkills(skillRepos)
+      } catch (error) {
+        console.error('Failed to fetch skills:', error)
+        setSkills([])
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchSkills()
+  }, [])
+
+  function detectCategory(slug: string): string {
+    const map: Record<string, string> = {
+      'seo': 'seo',
+      'code-review': 'coding',
+      'code-review-excellence': 'coding',
+      'db-optimize': 'devops',
+      'security-scan': 'security',
+      'api-docs': 'writing',
+      'test-gen': 'coding',
+      'log-analyze': 'analysis',
+      'backup-manager': 'devops',
+      'perf-monitor': 'devops',
+      'cloud-deploy': 'devops',
+      'image': 'design',
+      'weather': 'analysis',
+    }
+    return map[slug] || 'devops'
+  }
+
+  function formatName(slug: string): string {
+    return slug
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+  }
+
+  if (loading) {
+    return (
+      <section id="skills" className="relative py-28 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="text-2xl" style={{ color: '#00FFCC' }}>⚡ Loading skills...</div>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section id="skills" className="relative py-28 px-4">
@@ -124,7 +114,6 @@ export default function SkillsGallery() {
       <div className="section-divider absolute top-0 left-8 right-8" />
 
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -143,8 +132,7 @@ export default function SkillsGallery() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-black text-white mb-4"
           >
-            10 skills ready to{' '}
-            <span style={{ color: '#00FFCC' }}>deploy right now</span>
+            {skills.length} skills <span style={{ color: '#00FFCC' }}>ready to deploy</span>
           </motion.h2>
 
           <motion.p
@@ -158,7 +146,6 @@ export default function SkillsGallery() {
           </motion.p>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           {skills.map((skill, i) => {
             const isHovered = hoveredSlug === skill.slug
@@ -246,7 +233,6 @@ export default function SkillsGallery() {
           })}
         </div>
 
-        {/* Command hint */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -262,8 +248,7 @@ export default function SkillsGallery() {
               color: '#a855f7',
             }}
           >
-            <span style={{ color: '#22c55e' }}>$</span>
-            python3 skill_genesis.py
+            <span style={{ color: '#22c55e' }}>$</span> python3 skill_genesis.py
           </div>
         </motion.div>
       </div>
