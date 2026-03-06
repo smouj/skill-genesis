@@ -233,7 +233,7 @@ export default function Hero() {
           style={{ border: '1px solid rgba(139,0,255,0.4)', background: 'rgba(139,0,255,0.08)', color: '#a855f7' }}
         >
           <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#8B00FF' }} />
-          Powered by Kilo AI · OpenClaw Ecosystem
+          Created by Smouj · Powered by Kilo AI
         </motion.div>
 
         {/* Main Title */}
