@@ -45,10 +45,11 @@ if not GITHUB_PAT:
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
-SKILLS_HUB_REPO = os.getenv("SKILLS_HUB_REPO", "smouj/Skills-Hub")
+SKILLS_HUB_REPO = os.getenv("SKILLS_HUB_REPO", "smouj/skill-genesis")
 SMOUJ_PROFILE_REPO = os.getenv("SMOUJ_PROFILE_REPO", "smouj/smouj")
 
 SKILL_THEMES = [
+    # Development
     ("seo-audit", "SEO Audit", "seo", "Analyzes websites for technical SEO issues", "audit, analyze, optimize, keywords, meta, ranking"),
     ("code-review", "Code Review", "coding", "Provides comprehensive code review", "review, code, quality, bugs, security, best-practices"),
     ("db-optimize", "Database Optimizer", "devops", "Optimizes PostgreSQL queries", "database, postgres, queries, performance, optimize"),
@@ -59,6 +60,70 @@ SKILL_THEMES = [
     ("backup-manager", "Backup Manager", "devops", "Manages backup schedules", "backup, schedule, restore, automate"),
     ("perf-monitor", "Performance Monitor", "devops", "Monitors system performance", "performance, metrics, cpu, memory, monitor"),
     ("cloud-deploy", "Cloud Deployer", "devops", "Deploys to cloud providers", "deploy, cloud, aws, gcp, docker, kubernetes"),
+    
+    # DevOps & Infrastructure
+    ("git-optimizer", "Git Optimizer", "devops", "Optimizes git workflows and history", "git, commits, squash, merge, rebase"),
+    ("docker-gen", "Docker Generator", "devops", "Generates Dockerfiles and configs", "docker, container, dockerfile, build, optimize"),
+    ("ci-cd-builder", "CI/CD Builder", "devops", "Builds CI/CD pipelines", "ci, cd, github-actions, gitlab, jenkins"),
+    ("terraform-gen", "Terraform Generator", "infrastructure", "Generates Terraform configurations", "terraform, infrastructure, aws, gcp, iac"),
+    ("k8s-manifest", "Kubernetes Manifest", "infrastructure", "Creates K8s manifests", "kubernetes, k8s, manifest, deployment, helm"),
+    ("swagger-gen", "Swagger Generator", "coding", "Generates OpenAPI specs", "swagger, openapi, rest, api, spec"),
+    ("sql-builder", "SQL Builder", "devops", "Builds complex SQL queries", "sql, query, database, joins, aggregate"),
+    ("mongo-optimizer", "MongoDB Optimizer", "devops", "Optimizes MongoDB queries", "mongodb, nosql, query, index, performance"),
+    ("redis-cache", "Redis Cache Manager", "devops", "Manages Redis caching", "redis, cache, session, store, pubsub"),
+    ("graphql-gen", "GraphQL Generator", "coding", "Generates GraphQL schemas", "graphql, schema, resolver, api, types"),
+    
+    # Web Frameworks
+    ("react-component", "React Component Gen", "coding", "Creates React components", "react, component, jsx, hooks, ui"),
+    ("vue-component", "Vue Component Gen", "coding", "Creates Vue components", "vue, component, vue3, composition, ui"),
+    ("nextjs-page", "Next.js Page Builder", "coding", "Creates Next.js pages", "nextjs, page, routing, ssg, ssr"),
+    ("express-api", "Express API Builder", "coding", "Builds Express APIs", "express, api, rest, route, middleware"),
+    ("fastapi-gen", "FastAPI Generator", "coding", "Creates FastAPI services", "fastapi, python, api, pydantic, uvicorn"),
+    ("django-app", "Django App Builder", "coding", "Generates Django apps", "django, python, app, model, view"),
+    ("flask-api", "Flask API Generator", "coding", "Creates Flask APIs", "flask, python, api, route, blueprint"),
+    ("nestjs-module", "NestJS Module Builder", "coding", "Generates NestJS modules", "nestjs, module, service, controller, di"),
+    ("spring-boot", "Spring Boot Generator", "coding", "Creates Spring Boot apps", "spring, java, boot, rest, service"),
+    
+    # Cloud AWS
+    ("aws-lambda", "AWS Lambda Builder", "cloud", "Creates AWS Lambda functions", "aws, lambda, serverless, function, cloudwatch"),
+    ("s3-uploader", "S3 Uploader", "cloud", "Manages S3 file operations", "aws, s3, bucket, upload, storage"),
+    ("dynamodb-model", "DynamoDB Modeler", "cloud", "Creates DynamoDB models", "dynamodb, aws, nosql, model, partition"),
+    ("gcp-function", "GCP Function Creator", "cloud", "Creates GCP Cloud Functions", "gcp, function, serverless, trigger, cloud"),
+    ("azure-func", "Azure Function Builder", "cloud", "Builds Azure Functions", "azure, function, serverless, trigger, cloud"),
+    
+    # Data
+    ("data-pipeline", "Data Pipeline Builder", "data", "Creates ETL pipelines", "etl, pipeline, data, transform, load"),
+    ("csv-processor", "CSV Processor", "data", "Processes CSV files", "csv, parse, transform, data, pandas"),
+    ("json-transformer", "JSON Transformer", "data", "Transforms JSON data", "json, transform, map, data, parse"),
+    ("excel-generator", "Excel Generator", "data", "Generates Excel spreadsheets", "excel, spreadsheet, xlsx, data, report"),
+    ("data-validator", "Data Validator", "data", "Validates data quality", "validation, data, schema, quality, check"),
+    
+    # Automation
+    ("email-sender", "Email Sender", "automation", "Sends automated emails", "email, smtp, send, notification, template"),
+    ("webhook-handler", "Webhook Handler", "automation", "Processes webhooks", "webhook, handler, event, trigger, payload"),
+    ("cron-scheduler", "Cron Scheduler", "automation", "Manages cron jobs", "cron, schedule, job, task, automation"),
+    ("task-queue", "Task Queue Manager", "automation", "Manages task queues", "queue, worker, task, async, redis"),
+    ("notification-service", "Notification Service", "automation", "Sends multi-channel notifications", "notification, push, sms, email, slack"),
+    
+    # Security
+    ("auth-jwt", "JWT Auth Builder", "security", "Creates JWT authentication", "jwt, auth, token, security, login"),
+    ("oauth-provider", "OAuth Provider", "security", "Builds OAuth flows", "oauth, auth, google, github, login"),
+    ("password-manager", "Password Manager", "security", "Manages password policies", "password, hash, security, bcrypt, policy"),
+    ("cors-config", "CORS Configurator", "security", "Configures CORS policies", "cors, security, headers, api, access"),
+    ("rate-limiter", "Rate Limiter", "security", "Implements rate limiting", "rate, limit, throttle, api, ddos"),
+    
+    # Monitoring
+    ("metrics-collector", "Metrics Collector", "monitoring", "Collects system metrics", "metrics, prometheus, collect, stats, export"),
+    ("grafana-dashboard", "Grafana Dashboard", "monitoring", "Creates Grafana dashboards", "grafana, dashboard, metrics, panel, visualize"),
+    ("alert-manager", "Alert Manager", "monitoring", "Manages alerting rules", "alert, prometheus, notification, rule, severity"),
+    ("health-check", "Health Check Builder", "monitoring", "Creates health endpoints", "health, check, status, probe, readiness"),
+    ("trace-viewer", "Distributed Trace Viewer", "monitoring", "Visualizes traces", "tracing, jaeger, zipkin, span, debug"),
+    
+    # Documentation
+    ("doc-generator", "Doc Generator", "writing", "Generates documentation", "docs, markdown, readme, generate, write"),
+    ("readme-builder", "README Builder", "writing", "Creates README files", "readme, markdown, documentation, project, badges"),
+    ("changelog-gen", "Changelog Generator", "writing", "Generates changelogs", "changelog, git, commit, release, conventional"),
+    ("code-comments", "Code Comment Generator", "writing", "Adds code comments", "comments, docstring, generate, explain, annotate"),
 ]
 
 CATEGORIES = ["coding", "research", "writing", "design", "analysis", "marketing", "devops", "security"]
