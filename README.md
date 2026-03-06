@@ -12,7 +12,7 @@
 [![License](https://img.shields.io/badge/License-MIT-8B00FF?style=for-the-badge&labelColor=0A0A0A)](https://github.com/smouj/skill-genesis/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&labelColor=0A0A0A&logo=python&logoColor=3776AB)](https://python.org)
 [![Kilo AI](https://img.shields.io/badge/Kilo_AI-Powered-8B00FF?style=for-the-badge&labelColor=0A0A0A)](https://github.com/smouj)
-[![OpenClaw](https://img.shields.io/badge/OpenClaw-Ecosystem-FFD700?style=for-the-badge&labelColor=0A0A0A)](https://github.com/smouj/Skills-Hub)
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-Ecosystem-FFD700?style=for-the-badge&labelColor=0A0A0A)](https://github.com/smouj/skill-genesis)
 
 <br/>
 
@@ -32,13 +32,13 @@
 
 ## 🎯 What Is Skill Genesis?
 
-**Skill Genesis** is an autonomous Python CLI that creates complete, production-ready [OpenClaw](https://github.com/smouj/Skills-Hub) skills using Kilo AI. Run one command and watch the full pipeline execute:
+**Skill Genesis** is an autonomous Python CLI that creates complete, production-ready [OpenClaw](https://github.com/smouj/skill-genesis) skills using Kilo AI. Run one command and watch the full pipeline execute:
 
 1. 🎲 **Selects** a skill theme from 10 battle-tested categories
 2. 🧠 **Generates** rich SKILL.md content via Kilo AI (3× retry, 200s timeout)
 3. 📂 **Creates** bilingual files (EN + ES) — SKILL.md, README, and more
 4. 🚀 **Publishes** a new GitHub repository automatically
-5. 📋 **Updates** the Skills-Hub manifest.json for ecosystem discoverability
+5. 📋 **Updates** the skill-genesis manifest.json for ecosystem discoverability
 6. 🔔 **Notifies** via Telegram so you're always in the loop
 
 ---
@@ -91,7 +91,7 @@ pip install PyGithub requests python-dotenv
 GITHUB_PAT=ghp_xxxxxxxxxxxxxxxxxxxx      # Required: GitHub Personal Access Token
 TELEGRAM_BOT_TOKEN=123456:ABC-xxx        # Optional: Telegram bot notifications
 TELEGRAM_CHAT_ID=@your_channel_or_id    # Optional: Where to send notifications
-SKILLS_HUB_REPO=smouj/Skills-Hub        # Skills-Hub manifest repo
+SKILLS_HUB_REPO=smouj/skill-genesis        # skill-genesis manifest repo
 SMOUJ_PROFILE_REPO=smouj/smouj          # Profile README repo
 ```
 
@@ -139,7 +139,7 @@ python3 skill_genesis.py --dry-run
 | 🔄 **3× Retry Logic** | Retries with 200s timeout + category-specific fallback template |
 | 📦 **Auto-Publish** | Creates GitHub repo, uploads all files via GitHub API |
 | 📝 **Bilingual** | Generates EN + ES documentation automatically |
-| 🌐 **Skills-Hub Integration** | Updates manifest.json for ecosystem discoverability |
+| 🌐 **skill-genesis Integration** | Updates manifest.json for ecosystem discoverability |
 | 🔔 **Telegram Alerts** | Real-time notifications on skill creation |
 | 🔒 **Lock File Protection** | PID-based locking prevents concurrent runs |
 | ⚙️ **Zero Config Auth** | Auto-detects `gh auth token` if no .env found |
@@ -205,7 +205,7 @@ MIT © 2026 [smouj](https://github.com/smouj)
 
 <div align="center">
 
-**Built with ⚡ Kilo AI · Part of the [OpenClaw](https://github.com/smouj/Skills-Hub) Ecosystem**
+**Built with ⚡ Kilo AI · Part of the [OpenClaw](https://github.com/smouj/skill-genesis) Ecosystem**
 
 [🌐 Landing](https://smouj.github.io/skill-genesis) · [★ Star](https://github.com/smouj/skill-genesis) · [🐛 Bug](https://github.com/smouj/skill-genesis/issues) · [💡 Feature](https://github.com/smouj/skill-genesis/issues/new?labels=enhancement)
 
