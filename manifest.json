@@ -1,0 +1,1230 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-03-01T00:46:46Z",
+  "skills": [
+    {
+      "name": "abyss-scanner",
+      "repo": "smouj/abyss-scanner-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "osint",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "aegis-veil",
+      "repo": "smouj/aegis-veil-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "security",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "alchemurgist",
+      "repo": "smouj/alchemurgist-skill",
+      "emoji": "\ud83e\uddea",
+      "tag": "transformation",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "chrono-ward",
+      "repo": "smouj/chrono-ward-skill",
+      "emoji": "\u23f3",
+      "tag": "planning",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "codex-eternal",
+      "repo": "smouj/codex-eternal-skill",
+      "emoji": "\ud83d\udcdc",
+      "tag": "memory",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "flux-capacitor",
+      "repo": "smouj/flux-capacitor-skill",
+      "emoji": "\u26a1",
+      "tag": "optimization",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "genome-weaver",
+      "repo": "smouj/genome-weaver-skill",
+      "emoji": "\ud83e\uddec",
+      "tag": "evolution",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "mirror-council",
+      "repo": "smouj/mirror-council-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "multi-agent",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "phoenix-reborn",
+      "repo": "smouj/phoenix-reborn-skill",
+      "emoji": "\ud83d\udd04",
+      "tag": "reliability",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "provenance-guard",
+      "repo": "smouj/provenance-guard-skill",
+      "emoji": "\ud83e\uddfe",
+      "tag": "supply-chain-security",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "slo-warden",
+      "repo": "smouj/slo-warden-skill",
+      "emoji": "\ud83d\udcc8",
+      "tag": "reliability-operations",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "shadow-ledger",
+      "repo": "smouj/shadow-ledger-skill",
+      "emoji": "\ud83c\udf11",
+      "tag": "audit",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "vault-sentry",
+      "repo": "smouj/vault-sentry-skill",
+      "emoji": "\ud83d\udd10",
+      "tag": "secret-security",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "vuln-warden",
+      "repo": "smouj/vuln-warden-skill",
+      "emoji": "\ud83e\ude79",
+      "tag": "security-maintenance",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "cloud-deploy",
+      "repo": "smouj/cloud-deploy-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "devops",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "db-optimize",
+      "repo": "smouj/db-optimize-skill",
+      "emoji": "\ud83d\udcbe",
+      "tag": "devops",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "seo-audit",
+      "repo": "smouj/seo-audit-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "seo",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "log-analyze",
+      "repo": "smouj/log-analyze-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "analysis",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "backup-manager",
+      "repo": "smouj/backup-manager-skill",
+      "emoji": "\ud83d\udcb0",
+      "tag": "devops",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "security-scan",
+      "repo": "smouj/security-scan-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "security",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "test-gen",
+      "repo": "smouj/test-gen-skill",
+      "emoji": "\ud83e\uddea",
+      "tag": "coding",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "api-docs",
+      "repo": "smouj/api-docs-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "api",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "ci-cd-pipeline",
+      "repo": "smouj/ci-cd-pipeline-skill",
+      "emoji": "\ud83d\udccb",
+      "tag": "ci",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "threat-detect",
+      "repo": "smouj/threat-detect-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "threat",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "api-generator",
+      "repo": "smouj/api-generator-skill",
+      "emoji": "\ud83d\udcbe",
+      "tag": "api",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "data-prep",
+      "repo": "smouj/data-prep-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "data",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "container-orch",
+      "repo": "smouj/container-orch-skill",
+      "emoji": "\ud83d\udcbe",
+      "tag": "container",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "Code Refactorer",
+      "repo": "smouj/code-refactor-skill",
+      "emoji": "\u26a1",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "Prompt Engineer",
+      "repo": "smouj/prompt-engineer-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "prompt",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "Metric Insights",
+      "repo": "smouj/metric-insights-skill",
+      "emoji": "\ud83d\udcc8",
+      "tag": "metric",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "Secret Rotator",
+      "repo": "smouj/secret-rotation-skill",
+      "emoji": "\ud83d\udcbe",
+      "tag": "secret",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-review",
+      "repo": "smouj/code-review-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "perf-monitor",
+      "repo": "smouj/perf-monitor-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "perf",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "quantum-mock",
+      "repo": "smouj/quantum-mock-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "quantum",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "data-visualize",
+      "repo": "smouj/data-visualize-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "data",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-weaver",
+      "repo": "smouj/code-weaver-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "pixel-alchemist",
+      "repo": "smouj/pixel-alchemist-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "pixel",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "regex-sorcerer",
+      "repo": "smouj/regex-sorcerer-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "regex",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "ultra-orchestrator",
+      "repo": "smouj/ultra-orchestrator-skill",
+      "emoji": "\u26a1",
+      "tag": "ultra",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-alchemist",
+      "repo": "smouj/code-alchemist-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "max-finder",
+      "repo": "smouj/max-finder-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "max",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-whisperer",
+      "repo": "smouj/code-whisperer-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "infra-alchemist",
+      "repo": "smouj/infra-alchemist-skill",
+      "emoji": "\u2728",
+      "tag": "infra",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "data-alchemist",
+      "repo": "smouj/data-alchemist-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "data",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "prime-analyzer",
+      "repo": "smouj/prime-analyzer-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "prime",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "quantum-weaver",
+      "repo": "smouj/quantum-weaver-skill",
+      "emoji": "\u26a1",
+      "tag": "quantum",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "logic-loom",
+      "repo": "smouj/logic-loom-skill",
+      "emoji": "\u26a1",
+      "tag": "logic",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "flex-analyzer",
+      "repo": "smouj/flex-analyzer-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "flex",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "polyglot-transmogrifier",
+      "repo": "smouj/polyglot-transmogrifier-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "polyglot",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-ghostwriter",
+      "repo": "smouj/code-ghostwriter-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "ultra-optimizer",
+      "repo": "smouj/ultra-optimizer-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "ultra",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "architect-mind",
+      "repo": "smouj/architect-mind-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "architect",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "cross-generator",
+      "repo": "smouj/cross-generator-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "cross",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-sculptor",
+      "repo": "smouj/code-sculptor-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "dream-interpreter",
+      "repo": "smouj/dream-interpreter-skill",
+      "emoji": "\u26a1",
+      "tag": "dream",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "logic-alchemist",
+      "repo": "smouj/logic-alchemist-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "logic",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "symbiosis-engineer",
+      "repo": "smouj/symbiosis-engineer-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "symbiosis",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": " turbo-watcher",
+      "repo": "smouj/ turbo-watcher-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": " turbo",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-seer",
+      "repo": "smouj/code-seer-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "poly-scanner",
+      "repo": "smouj/poly-scanner-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "poly",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "algo-alchemist",
+      "repo": "smouj/algo-alchemist-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "algo",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "debug-sorcerer",
+      "repo": "smouj/debug-sorcerer-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "debug",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "mythbuster",
+      "repo": "smouj/mythbuster-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "mythbuster",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "git-ghosthunter",
+      "repo": "smouj/git-ghosthunter-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "git",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "legacy-code-resurrector",
+      "repo": "smouj/legacy-code-resurrector-skill",
+      "emoji": "\u26a1",
+      "tag": "legacy",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "impact-radar",
+      "repo": "smouj/impact-radar-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "impact",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-vision",
+      "repo": "smouj/code-vision-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "ultra-monitor",
+      "repo": "smouj/ultra-monitor-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "ultra",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "test-weaver",
+      "repo": "smouj/test-weaver-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "test",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "super-monitor",
+      "repo": "smouj/super-monitor-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "super",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "infra-weaver",
+      "repo": "smouj/infra-weaver-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "infra",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "deployment-sorcerer",
+      "repo": "smouj/deployment-sorcerer-skill",
+      "emoji": "\u2728",
+      "tag": "deployment",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "dynamic-finder",
+      "repo": "smouj/dynamic-finder-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "dynamic",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "secret-sentinel",
+      "repo": "smouj/secret-sentinel-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "secret",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "super-scanner",
+      "repo": "smouj/super-scanner-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "super",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "ai-threat-analyzer",
+      "repo": "smouj/ai-threat-analyzer-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "ai",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "automation-alchemist",
+      "repo": "smouj/automation-alchemist-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "automation",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-sorcerer",
+      "repo": "smouj/code-sorcerer-skill",
+      "emoji": "\u26a1",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "ghost-hunter",
+      "repo": "smouj/ghost-hunter-skill",
+      "emoji": "\u2728",
+      "tag": "ghost",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "pattern-forager",
+      "repo": "smouj/pattern-forager-skill",
+      "emoji": "\u26a1",
+      "tag": "pattern",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "pattern-painter",
+      "repo": "smouj/pattern-painter-skill",
+      "emoji": "\u26a1",
+      "tag": "pattern",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "correlation-weaver",
+      "repo": "smouj/correlation-weaver-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "correlation",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "auto-watcher",
+      "repo": "smouj/auto-watcher-skill",
+      "emoji": "\u26a1",
+      "tag": "auto",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "pattern-weaver",
+      "repo": "smouj/pattern-weaver-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "pattern",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "auto-builder",
+      "repo": "smouj/auto-builder-skill",
+      "emoji": "\u26a1",
+      "tag": "auto",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "data-mystic",
+      "repo": "smouj/data-mystic-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "data",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-archaeologist",
+      "repo": "smouj/code-archaeologist-skill",
+      "emoji": "\u26a1",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "devops-alchemist",
+      "repo": "smouj/devops-alchemist-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "devops",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "`bug-seer",
+      "repo": "smouj/`bug-seer-skill",
+      "emoji": "\u26a1",
+      "tag": "`bug",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "workflow-weaver",
+      "repo": "smouj/workflow-weaver-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "workflow",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "omni-watcher",
+      "repo": "smouj/omni-watcher-skill",
+      "emoji": "\u26a1",
+      "tag": "omni",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-canary",
+      "repo": "smouj/code-canary-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "logic-weaver",
+      "repo": "smouj/logic-weaver-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "logic",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "logic-validator",
+      "repo": "smouj/logic-validator-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "logic",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "commit-spelunker",
+      "repo": "smouj/commit-spelunker-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "commit",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "git-sorcerer",
+      "repo": "smouj/git-sorcerer-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "git",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "cache-cavalier",
+      "repo": "smouj/cache-cavalier-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "cache",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-mapper",
+      "repo": "smouj/code-mapper-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "infrastructure-alchemist",
+      "repo": "smouj/infrastructure-alchemist-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "infrastructure",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "syntax-alchemist",
+      "repo": "smouj/syntax-alchemist-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "syntax",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "chaos-gardener",
+      "repo": "smouj/chaos-gardener-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "chaos",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "hyper-maker",
+      "repo": "smouj/hyper-maker-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "hyper",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "bug-whisperer",
+      "repo": "smouj/bug-whisperer-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "bug",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "meta-builder",
+      "repo": "smouj/meta-builder-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "meta",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "hyper-tracker",
+      "repo": "smouj/hyper-tracker-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "hyper",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "meta-watcher",
+      "repo": "smouj/meta-watcher-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "meta",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "infra-illuminator",
+      "repo": "smouj/infra-illuminator-skill",
+      "emoji": "\u26a1",
+      "tag": "infra",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "trace-mapper",
+      "repo": "smouj/trace-mapper-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "trace",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "bug-archaeologist",
+      "repo": "smouj/bug-archaeologist-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "bug",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "pixel-poet",
+      "repo": "smouj/pixel-poet-skill",
+      "emoji": "\u26a1",
+      "tag": "pixel",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "auto-orchestrator",
+      "repo": "smouj/auto-orchestrator-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "auto",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "rapid-executor",
+      "repo": "smouj/rapid-executor-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "rapid",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "cross-monitor",
+      "repo": "smouj/cross-monitor-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "cross",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "pattern-hunter",
+      "repo": "smouj/pattern-hunter-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "pattern",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-narrator",
+      "repo": "smouj/code-narrator-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-crafter",
+      "repo": "smouj/code-crafter-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "refactor-genius",
+      "repo": "smouj/refactor-genius-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "refactor",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-muse",
+      "repo": "smouj/code-muse-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "logic-sculptor",
+      "repo": "smouj/logic-sculptor-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "logic",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-time-traveler",
+      "repo": "smouj/code-time-traveler-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "api-alchemist",
+      "repo": "smouj/api-alchemist-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "api",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "omni-tracker",
+      "repo": "smouj/omni-tracker-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "omni",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "component-alchemist",
+      "repo": "smouj/component-alchemist-skill",
+      "emoji": "\u2728",
+      "tag": "component",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "pulse-reader",
+      "repo": "smouj/pulse-reader-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "pulse",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-symphonist",
+      "repo": "smouj/code-symphonist-skill",
+      "emoji": "\u2728",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "cross-orchestrator",
+      "repo": "smouj/cross-orchestrator-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "cross",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "git-archaeologist",
+      "repo": "smouj/git-archaeologist-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "git",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "meta-weaver",
+      "repo": "smouj/meta-weaver-skill",
+      "emoji": "\u2728",
+      "tag": "meta",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "cloud-cost-optimizer",
+      "repo": "smouj/cloud-cost-optimizer-skill",
+      "emoji": "\u26a1",
+      "tag": "cloud",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "bug-bounty-bot",
+      "repo": "smouj/bug-bounty-bot-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "bug",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "intent-compiler",
+      "repo": "smouj/intent-compiler-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "intent",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-shaman",
+      "repo": "smouj/code-shaman-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "ultra-generator",
+      "repo": "smouj/ultra-generator-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "ultra",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "meta-tracker",
+      "repo": "smouj/meta-tracker-skill",
+      "emoji": "\u26a1",
+      "tag": "meta",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "pattern-spotter",
+      "repo": "smouj/pattern-spotter-skill",
+      "emoji": "\u2728",
+      "tag": "pattern",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-sleuth",
+      "repo": "smouj/code-sleuth-skill",
+      "emoji": "\u2728",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    }
+  ]
+}
