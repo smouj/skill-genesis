@@ -5,7 +5,7 @@
     {
       "name": "code-augur",
       "repo": "smouj/code-augur-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -14,7 +14,7 @@
     {
       "name": "code-clairvoyant",
       "repo": "smouj/code-clairvoyant-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -23,7 +23,7 @@
     {
       "name": "ultra-finder",
       "repo": "smouj/ultra-finder-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "ultra",
       "status": "Ready",
       "version": "1.0.0",
@@ -32,7 +32,7 @@
     {
       "name": "chaos-tamer",
       "repo": "smouj/chaos-tamer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "chaos",
       "status": "Ready",
       "version": "1.0.0",
@@ -41,7 +41,7 @@
     {
       "name": "multi-agent-maestro",
       "repo": "smouj/multi-agent-maestro-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "multi",
       "status": "Ready",
       "version": "1.0.0",
@@ -50,7 +50,7 @@
     {
       "name": "smart-optimizer",
       "repo": "smouj/smart-optimizer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "smart",
       "status": "Ready",
       "version": "1.0.0",
@@ -59,7 +59,7 @@
     {
       "name": "code-sentinel",
       "repo": "smouj/code-sentinel-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -68,7 +68,7 @@
     {
       "name": "infrastructure-weaver",
       "repo": "smouj/infrastructure-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "infrastructure",
       "status": "Ready",
       "version": "1.0.0",
@@ -77,7 +77,7 @@
     {
       "name": "debug-sentinel",
       "repo": "smouj/debug-sentinel-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "debug",
       "status": "Ready",
       "version": "1.0.0",
@@ -86,7 +86,7 @@
     {
       "name": "code-soothsayer",
       "repo": "smouj/code-soothsayer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -95,7 +95,7 @@
     {
       "name": "max-watcher",
       "repo": "smouj/max-watcher-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "max",
       "status": "Ready",
       "version": "1.0.0",
@@ -104,7 +104,7 @@
     {
       "name": "code-phoenix",
       "repo": "smouj/code-phoenix-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -113,7 +113,7 @@
     {
       "name": "chaos-curator",
       "repo": "smouj/chaos-curator-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "chaos",
       "status": "Ready",
       "version": "1.0.0",
@@ -122,7 +122,7 @@
     {
       "name": "data-weaver",
       "repo": "smouj/data-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "data",
       "status": "Ready",
       "version": "1.0.0",
@@ -131,7 +131,7 @@
     {
       "name": "smart-finder",
       "repo": "smouj/smart-finder-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "smart",
       "status": "Ready",
       "version": "1.0.0",
@@ -140,7 +140,7 @@
     {
       "name": "super-maker",
       "repo": "smouj/super-maker-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "super",
       "status": "Ready",
       "version": "1.0.0",
@@ -149,7 +149,7 @@
     {
       "name": "cloud-symphonist",
       "repo": "smouj/cloud-symphonist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "cloud",
       "status": "Ready",
       "version": "1.0.0",
@@ -158,7 +158,7 @@
     {
       "name": "storyteller-engine",
       "repo": "smouj/storyteller-engine-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "storyteller",
       "status": "Ready",
       "version": "1.0.0",
@@ -167,7 +167,7 @@
     {
       "name": "forge-flow",
       "repo": "smouj/forge-flow-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "forge",
       "status": "Ready",
       "version": "1.0.0",
@@ -176,7 +176,7 @@
     {
       "name": "specification-sculptor",
       "repo": "smouj/specification-sculptor-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "specification",
       "status": "Ready",
       "version": "1.0.0",
@@ -185,7 +185,7 @@
     {
       "name": "infrastructure-painter",
       "repo": "smouj/infrastructure-painter-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "infrastructure",
       "status": "Ready",
       "version": "1.0.0",
@@ -194,7 +194,7 @@
     {
       "name": "code-ghost",
       "repo": "smouj/code-ghost-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -203,7 +203,7 @@
     {
       "name": "code-sleuth",
       "repo": "smouj/code-sleuth-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -212,7 +212,7 @@
     {
       "name": "pattern-spotter",
       "repo": "smouj/pattern-spotter-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "pattern",
       "status": "Ready",
       "version": "1.0.0",
@@ -221,7 +221,7 @@
     {
       "name": "meta-tracker",
       "repo": "smouj/meta-tracker-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "meta",
       "status": "Ready",
       "version": "1.0.0",
@@ -230,7 +230,7 @@
     {
       "name": "ultra-generator",
       "repo": "smouj/ultra-generator-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "ultra",
       "status": "Ready",
       "version": "1.0.0",
@@ -239,7 +239,7 @@
     {
       "name": "code-shaman",
       "repo": "smouj/code-shaman-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -248,7 +248,7 @@
     {
       "name": "intent-compiler",
       "repo": "smouj/intent-compiler-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "intent",
       "status": "Ready",
       "version": "1.0.0",
@@ -257,7 +257,7 @@
     {
       "name": "bug-bounty-bot",
       "repo": "smouj/bug-bounty-bot-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "bug",
       "status": "Ready",
       "version": "1.0.0",
@@ -266,7 +266,7 @@
     {
       "name": "cloud-cost-optimizer",
       "repo": "smouj/cloud-cost-optimizer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "cloud",
       "status": "Ready",
       "version": "1.0.0",
@@ -275,7 +275,7 @@
     {
       "name": "meta-weaver",
       "repo": "smouj/meta-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "meta",
       "status": "Ready",
       "version": "1.0.0",
@@ -284,7 +284,7 @@
     {
       "name": "git-archaeologist",
       "repo": "smouj/git-archaeologist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "git",
       "status": "Ready",
       "version": "1.0.0",
@@ -293,7 +293,7 @@
     {
       "name": "cross-orchestrator",
       "repo": "smouj/cross-orchestrator-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "cross",
       "status": "Ready",
       "version": "1.0.0",
@@ -302,7 +302,7 @@
     {
       "name": "code-symphonist",
       "repo": "smouj/code-symphonist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -311,7 +311,7 @@
     {
       "name": "pulse-reader",
       "repo": "smouj/pulse-reader-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "pulse",
       "status": "Ready",
       "version": "1.0.0",
@@ -320,7 +320,7 @@
     {
       "name": "component-alchemist",
       "repo": "smouj/component-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "component",
       "status": "Ready",
       "version": "1.0.0",
@@ -329,7 +329,7 @@
     {
       "name": "omni-tracker",
       "repo": "smouj/omni-tracker-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "omni",
       "status": "Ready",
       "version": "1.0.0",
@@ -338,7 +338,7 @@
     {
       "name": "api-alchemist",
       "repo": "smouj/api-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "api",
       "status": "Ready",
       "version": "1.0.0",
@@ -347,7 +347,7 @@
     {
       "name": "code-time-traveler",
       "repo": "smouj/code-time-traveler-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -356,7 +356,7 @@
     {
       "name": "logic-sculptor",
       "repo": "smouj/logic-sculptor-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "logic",
       "status": "Ready",
       "version": "1.0.0",
@@ -365,7 +365,7 @@
     {
       "name": "code-muse",
       "repo": "smouj/code-muse-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -374,7 +374,7 @@
     {
       "name": "refactor-genius",
       "repo": "smouj/refactor-genius-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "refactor",
       "status": "Ready",
       "version": "1.0.0",
@@ -383,7 +383,7 @@
     {
       "name": "code-crafter",
       "repo": "smouj/code-crafter-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -392,7 +392,7 @@
     {
       "name": "code-narrator",
       "repo": "smouj/code-narrator-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -401,7 +401,7 @@
     {
       "name": "pattern-hunter",
       "repo": "smouj/pattern-hunter-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "pattern",
       "status": "Ready",
       "version": "1.0.0",
@@ -410,7 +410,7 @@
     {
       "name": "cross-monitor",
       "repo": "smouj/cross-monitor-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "cross",
       "status": "Ready",
       "version": "1.0.0",
@@ -419,7 +419,7 @@
     {
       "name": "rapid-executor",
       "repo": "smouj/rapid-executor-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "rapid",
       "status": "Ready",
       "version": "1.0.0",
@@ -428,7 +428,7 @@
     {
       "name": "auto-orchestrator",
       "repo": "smouj/auto-orchestrator-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "auto",
       "status": "Ready",
       "version": "1.0.0",
@@ -437,7 +437,7 @@
     {
       "name": "pixel-poet",
       "repo": "smouj/pixel-poet-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "pixel",
       "status": "Ready",
       "version": "1.0.0",
@@ -446,7 +446,7 @@
     {
       "name": "bug-archaeologist",
       "repo": "smouj/bug-archaeologist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "bug",
       "status": "Ready",
       "version": "1.0.0",
@@ -455,7 +455,7 @@
     {
       "name": "trace-mapper",
       "repo": "smouj/trace-mapper-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "trace",
       "status": "Ready",
       "version": "1.0.0",
@@ -464,7 +464,7 @@
     {
       "name": "infra-illuminator",
       "repo": "smouj/infra-illuminator-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "infra",
       "status": "Ready",
       "version": "1.0.0",
@@ -473,7 +473,7 @@
     {
       "name": "meta-watcher",
       "repo": "smouj/meta-watcher-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "meta",
       "status": "Ready",
       "version": "1.0.0",
@@ -482,7 +482,7 @@
     {
       "name": "hyper-tracker",
       "repo": "smouj/hyper-tracker-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "hyper",
       "status": "Ready",
       "version": "1.0.0",
@@ -491,7 +491,7 @@
     {
       "name": "meta-builder",
       "repo": "smouj/meta-builder-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "meta",
       "status": "Ready",
       "version": "1.0.0",
@@ -500,7 +500,7 @@
     {
       "name": "bug-whisperer",
       "repo": "smouj/bug-whisperer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "bug",
       "status": "Ready",
       "version": "1.0.0",
@@ -509,7 +509,7 @@
     {
       "name": "hyper-maker",
       "repo": "smouj/hyper-maker-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "hyper",
       "status": "Ready",
       "version": "1.0.0",
@@ -518,7 +518,7 @@
     {
       "name": "chaos-gardener",
       "repo": "smouj/chaos-gardener-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "chaos",
       "status": "Ready",
       "version": "1.0.0",
@@ -527,7 +527,7 @@
     {
       "name": "syntax-alchemist",
       "repo": "smouj/syntax-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "syntax",
       "status": "Ready",
       "version": "1.0.0",
@@ -536,7 +536,7 @@
     {
       "name": "infrastructure-alchemist",
       "repo": "smouj/infrastructure-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "infrastructure",
       "status": "Ready",
       "version": "1.0.0",
@@ -545,7 +545,7 @@
     {
       "name": "code-mapper",
       "repo": "smouj/code-mapper-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -554,7 +554,7 @@
     {
       "name": "cache-cavalier",
       "repo": "smouj/cache-cavalier-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "cache",
       "status": "Ready",
       "version": "1.0.0",
@@ -563,7 +563,7 @@
     {
       "name": "git-sorcerer",
       "repo": "smouj/git-sorcerer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "git",
       "status": "Ready",
       "version": "1.0.0",
@@ -572,7 +572,7 @@
     {
       "name": "commit-spelunker",
       "repo": "smouj/commit-spelunker-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "commit",
       "status": "Ready",
       "version": "1.0.0",
@@ -581,7 +581,7 @@
     {
       "name": "logic-validator",
       "repo": "smouj/logic-validator-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "logic",
       "status": "Ready",
       "version": "1.0.0",
@@ -590,7 +590,7 @@
     {
       "name": "logic-weaver",
       "repo": "smouj/logic-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "logic",
       "status": "Ready",
       "version": "1.0.0",
@@ -599,7 +599,7 @@
     {
       "name": "code-canary",
       "repo": "smouj/code-canary-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -608,7 +608,7 @@
     {
       "name": "omni-watcher",
       "repo": "smouj/omni-watcher-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "omni",
       "status": "Ready",
       "version": "1.0.0",
@@ -617,7 +617,7 @@
     {
       "name": "workflow-weaver",
       "repo": "smouj/workflow-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "workflow",
       "status": "Ready",
       "version": "1.0.0",
@@ -626,7 +626,7 @@
     {
       "name": "devops-alchemist",
       "repo": "smouj/devops-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "devops",
       "status": "Ready",
       "version": "1.0.0",
@@ -635,7 +635,7 @@
     {
       "name": "code-archaeologist",
       "repo": "smouj/code-archaeologist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -644,7 +644,7 @@
     {
       "name": "data-mystic",
       "repo": "smouj/data-mystic-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "data",
       "status": "Ready",
       "version": "1.0.0",
@@ -653,7 +653,7 @@
     {
       "name": "auto-builder",
       "repo": "smouj/auto-builder-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "auto",
       "status": "Ready",
       "version": "1.0.0",
@@ -662,7 +662,7 @@
     {
       "name": "pattern-weaver",
       "repo": "smouj/pattern-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "pattern",
       "status": "Ready",
       "version": "1.0.0",
@@ -671,7 +671,7 @@
     {
       "name": "auto-watcher",
       "repo": "smouj/auto-watcher-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "auto",
       "status": "Ready",
       "version": "1.0.0",
@@ -680,7 +680,7 @@
     {
       "name": "correlation-weaver",
       "repo": "smouj/correlation-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "correlation",
       "status": "Ready",
       "version": "1.0.0",
@@ -689,7 +689,7 @@
     {
       "name": "pattern-painter",
       "repo": "smouj/pattern-painter-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "pattern",
       "status": "Ready",
       "version": "1.0.0",
@@ -698,7 +698,7 @@
     {
       "name": "pattern-forager",
       "repo": "smouj/pattern-forager-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "pattern",
       "status": "Ready",
       "version": "1.0.0",
@@ -707,7 +707,7 @@
     {
       "name": "ghost-hunter",
       "repo": "smouj/ghost-hunter-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "ghost",
       "status": "Ready",
       "version": "1.0.0",
@@ -716,7 +716,7 @@
     {
       "name": "code-sorcerer",
       "repo": "smouj/code-sorcerer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -725,7 +725,7 @@
     {
       "name": "automation-alchemist",
       "repo": "smouj/automation-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "automation",
       "status": "Ready",
       "version": "1.0.0",
@@ -734,7 +734,7 @@
     {
       "name": "ai-threat-analyzer",
       "repo": "smouj/ai-threat-analyzer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "ai",
       "status": "Ready",
       "version": "1.0.0",
@@ -743,7 +743,7 @@
     {
       "name": "super-scanner",
       "repo": "smouj/super-scanner-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "super",
       "status": "Ready",
       "version": "1.0.0",
@@ -752,7 +752,7 @@
     {
       "name": "secret-sentinel",
       "repo": "smouj/secret-sentinel-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "secret",
       "status": "Ready",
       "version": "1.0.0",
@@ -761,7 +761,7 @@
     {
       "name": "dynamic-finder",
       "repo": "smouj/dynamic-finder-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "dynamic",
       "status": "Ready",
       "version": "1.0.0",
@@ -770,7 +770,7 @@
     {
       "name": "deployment-sorcerer",
       "repo": "smouj/deployment-sorcerer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "deployment",
       "status": "Ready",
       "version": "1.0.0",
@@ -779,7 +779,7 @@
     {
       "name": "infra-weaver",
       "repo": "smouj/infra-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "infra",
       "status": "Ready",
       "version": "1.0.0",
@@ -788,7 +788,7 @@
     {
       "name": "super-monitor",
       "repo": "smouj/super-monitor-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "super",
       "status": "Ready",
       "version": "1.0.0",
@@ -797,7 +797,7 @@
     {
       "name": "test-weaver",
       "repo": "smouj/test-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "test",
       "status": "Ready",
       "version": "1.0.0",
@@ -806,7 +806,7 @@
     {
       "name": "ultra-monitor",
       "repo": "smouj/ultra-monitor-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "ultra",
       "status": "Ready",
       "version": "1.0.0",
@@ -815,7 +815,7 @@
     {
       "name": "code-vision",
       "repo": "smouj/code-vision-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -824,7 +824,7 @@
     {
       "name": "impact-radar",
       "repo": "smouj/impact-radar-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "impact",
       "status": "Ready",
       "version": "1.0.0",
@@ -833,7 +833,7 @@
     {
       "name": "legacy-code-resurrector",
       "repo": "smouj/legacy-code-resurrector-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "legacy",
       "status": "Ready",
       "version": "1.0.0",
@@ -842,7 +842,7 @@
     {
       "name": "git-ghosthunter",
       "repo": "smouj/git-ghosthunter-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "git",
       "status": "Ready",
       "version": "1.0.0",
@@ -851,7 +851,7 @@
     {
       "name": "mythbuster",
       "repo": "smouj/mythbuster-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "mythbuster",
       "status": "Ready",
       "version": "1.0.0",
@@ -860,7 +860,7 @@
     {
       "name": "debug-sorcerer",
       "repo": "smouj/debug-sorcerer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "debug",
       "status": "Ready",
       "version": "1.0.0",
@@ -869,7 +869,7 @@
     {
       "name": "algo-alchemist",
       "repo": "smouj/algo-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "algo",
       "status": "Ready",
       "version": "1.0.0",
@@ -878,7 +878,7 @@
     {
       "name": "poly-scanner",
       "repo": "smouj/poly-scanner-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "poly",
       "status": "Ready",
       "version": "1.0.0",
@@ -887,7 +887,7 @@
     {
       "name": "code-seer",
       "repo": "smouj/code-seer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -896,7 +896,7 @@
     {
       "name": "symbiosis-engineer",
       "repo": "smouj/symbiosis-engineer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "symbiosis",
       "status": "Ready",
       "version": "1.0.0",
@@ -905,7 +905,7 @@
     {
       "name": "logic-alchemist",
       "repo": "smouj/logic-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "logic",
       "status": "Ready",
       "version": "1.0.0",
@@ -914,7 +914,7 @@
     {
       "name": "dream-interpreter",
       "repo": "smouj/dream-interpreter-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "dream",
       "status": "Ready",
       "version": "1.0.0",
@@ -923,7 +923,7 @@
     {
       "name": "code-sculptor",
       "repo": "smouj/code-sculptor-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -932,7 +932,7 @@
     {
       "name": "cross-generator",
       "repo": "smouj/cross-generator-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "cross",
       "status": "Ready",
       "version": "1.0.0",
@@ -941,7 +941,7 @@
     {
       "name": "architect-mind",
       "repo": "smouj/architect-mind-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "architect",
       "status": "Ready",
       "version": "1.0.0",
@@ -950,7 +950,7 @@
     {
       "name": "ultra-optimizer",
       "repo": "smouj/ultra-optimizer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "ultra",
       "status": "Ready",
       "version": "1.0.0",
@@ -959,7 +959,7 @@
     {
       "name": "code-ghostwriter",
       "repo": "smouj/code-ghostwriter-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -968,7 +968,7 @@
     {
       "name": "polyglot-transmogrifier",
       "repo": "smouj/polyglot-transmogrifier-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "polyglot",
       "status": "Ready",
       "version": "1.0.0",
@@ -977,7 +977,7 @@
     {
       "name": "flex-analyzer",
       "repo": "smouj/flex-analyzer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "flex",
       "status": "Ready",
       "version": "1.0.0",
@@ -986,7 +986,7 @@
     {
       "name": "logic-loom",
       "repo": "smouj/logic-loom-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "logic",
       "status": "Ready",
       "version": "1.0.0",
@@ -995,7 +995,7 @@
     {
       "name": "quantum-weaver",
       "repo": "smouj/quantum-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "quantum",
       "status": "Ready",
       "version": "1.0.0",
@@ -1004,7 +1004,7 @@
     {
       "name": "prime-analyzer",
       "repo": "smouj/prime-analyzer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "prime",
       "status": "Ready",
       "version": "1.0.0",
@@ -1013,7 +1013,7 @@
     {
       "name": "data-alchemist",
       "repo": "smouj/data-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "data",
       "status": "Ready",
       "version": "1.0.0",
@@ -1022,7 +1022,7 @@
     {
       "name": "infra-alchemist",
       "repo": "smouj/infra-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "infra",
       "status": "Ready",
       "version": "1.0.0",
@@ -1031,7 +1031,7 @@
     {
       "name": "code-whisperer",
       "repo": "smouj/code-whisperer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -1040,7 +1040,7 @@
     {
       "name": "max-finder",
       "repo": "smouj/max-finder-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "max",
       "status": "Ready",
       "version": "1.0.0",
@@ -1049,7 +1049,7 @@
     {
       "name": "code-alchemist",
       "repo": "smouj/code-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -1058,7 +1058,7 @@
     {
       "name": "ultra-orchestrator",
       "repo": "smouj/ultra-orchestrator-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "ultra",
       "status": "Ready",
       "version": "1.0.0",
@@ -1067,7 +1067,7 @@
     {
       "name": "regex-sorcerer",
       "repo": "smouj/regex-sorcerer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "regex",
       "status": "Ready",
       "version": "1.0.0",
@@ -1076,7 +1076,7 @@
     {
       "name": "pixel-alchemist",
       "repo": "smouj/pixel-alchemist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "pixel",
       "status": "Ready",
       "version": "1.0.0",
@@ -1085,7 +1085,7 @@
     {
       "name": "code-weaver",
       "repo": "smouj/code-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -1094,7 +1094,7 @@
     {
       "name": "vuln-warden",
       "repo": "smouj/vuln-warden-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "vuln",
       "status": "Ready",
       "version": "1.0.0",
@@ -1103,7 +1103,7 @@
     {
       "name": "vault-sentry",
       "repo": "smouj/vault-sentry-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "vault",
       "status": "Ready",
       "version": "1.0.0",
@@ -1112,7 +1112,7 @@
     {
       "name": "shadow-ledger",
       "repo": "smouj/shadow-ledger-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "shadow",
       "status": "Ready",
       "version": "1.0.0",
@@ -1121,7 +1121,7 @@
     {
       "name": "slo-warden",
       "repo": "smouj/slo-warden-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "slo",
       "status": "Ready",
       "version": "1.0.0",
@@ -1130,7 +1130,7 @@
     {
       "name": "provenance-guard",
       "repo": "smouj/provenance-guard-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "provenance",
       "status": "Ready",
       "version": "1.0.0",
@@ -1139,7 +1139,7 @@
     {
       "name": "phoenix-reborn",
       "repo": "smouj/phoenix-reborn-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "phoenix",
       "status": "Ready",
       "version": "1.0.0",
@@ -1148,7 +1148,7 @@
     {
       "name": "mirror-council",
       "repo": "smouj/mirror-council-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "mirror",
       "status": "Ready",
       "version": "1.0.0",
@@ -1157,7 +1157,7 @@
     {
       "name": "genome-weaver",
       "repo": "smouj/genome-weaver-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "genome",
       "status": "Ready",
       "version": "1.0.0",
@@ -1166,7 +1166,7 @@
     {
       "name": "flux-capacitor",
       "repo": "smouj/flux-capacitor-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "flux",
       "status": "Ready",
       "version": "1.0.0",
@@ -1175,7 +1175,7 @@
     {
       "name": "codex-eternal",
       "repo": "smouj/codex-eternal-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "codex",
       "status": "Ready",
       "version": "1.0.0",
@@ -1184,7 +1184,7 @@
     {
       "name": "chrono-ward",
       "repo": "smouj/chrono-ward-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "chrono",
       "status": "Ready",
       "version": "1.0.0",
@@ -1193,7 +1193,7 @@
     {
       "name": "alchemurgist",
       "repo": "smouj/alchemurgist-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "alchemurgist",
       "status": "Ready",
       "version": "1.0.0",
@@ -1202,7 +1202,7 @@
     {
       "name": "aegis-veil",
       "repo": "smouj/aegis-veil-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "aegis",
       "status": "Ready",
       "version": "1.0.0",
@@ -1211,7 +1211,7 @@
     {
       "name": "abyss-scanner",
       "repo": "smouj/abyss-scanner-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "abyss",
       "status": "Ready",
       "version": "1.0.0",
@@ -1220,7 +1220,7 @@
     {
       "name": "code-refactor",
       "repo": "smouj/code-refactor-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -1229,7 +1229,7 @@
     {
       "name": "prompt-engineer",
       "repo": "smouj/prompt-engineer-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "prompt",
       "status": "Ready",
       "version": "1.0.0",
@@ -1238,7 +1238,7 @@
     {
       "name": "metric-insights",
       "repo": "smouj/metric-insights-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "metric",
       "status": "Ready",
       "version": "1.0.0",
@@ -1247,7 +1247,7 @@
     {
       "name": "secret-rotation",
       "repo": "smouj/secret-rotation-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "secret",
       "status": "Ready",
       "version": "1.0.0",
@@ -1256,7 +1256,7 @@
     {
       "name": "code-review",
       "repo": "smouj/code-review-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
@@ -1265,7 +1265,7 @@
     {
       "name": "data-visualize",
       "repo": "smouj/data-visualize-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "data",
       "status": "Ready",
       "version": "1.0.0",
@@ -1274,7 +1274,7 @@
     {
       "name": "quantum-mock",
       "repo": "smouj/quantum-mock-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "quantum",
       "status": "Ready",
       "version": "1.0.0",
@@ -1283,7 +1283,7 @@
     {
       "name": "perf-monitor",
       "repo": "smouj/perf-monitor-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "perf",
       "status": "Ready",
       "version": "1.0.0",
@@ -1292,7 +1292,7 @@
     {
       "name": "container-orch",
       "repo": "smouj/container-orch-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "container",
       "status": "Ready",
       "version": "1.0.0",
@@ -1301,7 +1301,7 @@
     {
       "name": "data-prep",
       "repo": "smouj/data-prep-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "data",
       "status": "Ready",
       "version": "1.0.0",
@@ -1310,7 +1310,7 @@
     {
       "name": "api-generator",
       "repo": "smouj/api-generator-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "api",
       "status": "Ready",
       "version": "1.0.0",
@@ -1319,7 +1319,7 @@
     {
       "name": "threat-detect",
       "repo": "smouj/threat-detect-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "threat",
       "status": "Ready",
       "version": "1.0.0",
@@ -1328,7 +1328,7 @@
     {
       "name": "ci-cd-pipeline",
       "repo": "smouj/ci-cd-pipeline-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "ci",
       "status": "Ready",
       "version": "1.0.0",
@@ -1337,7 +1337,7 @@
     {
       "name": "api-docs",
       "repo": "smouj/api-docs-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "api",
       "status": "Ready",
       "version": "1.0.0",
@@ -1346,7 +1346,7 @@
     {
       "name": "test-gen",
       "repo": "smouj/test-gen-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "test",
       "status": "Ready",
       "version": "1.0.0",
@@ -1355,7 +1355,7 @@
     {
       "name": "security-scan",
       "repo": "smouj/security-scan-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "security",
       "status": "Ready",
       "version": "1.0.0",
@@ -1364,7 +1364,7 @@
     {
       "name": "backup-manager",
       "repo": "smouj/backup-manager-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "backup",
       "status": "Ready",
       "version": "1.0.0",
@@ -1373,7 +1373,7 @@
     {
       "name": "log-analyze",
       "repo": "smouj/log-analyze-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "log",
       "status": "Ready",
       "version": "1.0.0",
@@ -1382,7 +1382,7 @@
     {
       "name": "seo-audit",
       "repo": "smouj/seo-audit-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "seo",
       "status": "Ready",
       "version": "1.0.0",
@@ -1391,7 +1391,7 @@
     {
       "name": "db-optimize",
       "repo": "smouj/db-optimize-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "db",
       "status": "Ready",
       "version": "1.0.0",
@@ -1400,8 +1400,17 @@
     {
       "name": "cloud-deploy",
       "repo": "smouj/cloud-deploy-skill",
-      "emoji": "⚡",
+      "emoji": "\u26a1",
       "tag": "cloud",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
+    },
+    {
+      "name": "code-genie",
+      "repo": "smouj/code-genie-skill",
+      "emoji": "\u2728",
+      "tag": "code",
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
