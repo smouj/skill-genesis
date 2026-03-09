@@ -15,6 +15,11 @@ interface Skill {
   stars?: number
 }
 
+interface RepoInfo {
+  description?: string
+  stargazers_count?: number
+}
+
 const categoryColors: Record<string, string> = {
   code: '#00D9FF',
   seo: '#8B5CF6',
@@ -30,7 +35,6 @@ const categoryColors: Record<string, string> = {
   auto: '#A855F7',
   meta: '#06B6D4',
   bug: '#DC2626',
-  infra: '#8B5CF6',
 }
 
 const categoryEmojis: Record<string, string> = {
@@ -65,23 +69,27 @@ export default function SkillsGallery() {
   useEffect(() => {
     async function fetchSkills() {
       try {
-        // Fetch manifest for skills list
         const manifestRes = await fetch('https://raw.githubusercontent.com/smouj/skill-genesis/main/manifest.json')
         const manifest = await manifestRes.json()
         
-        // Fetch repos for additional data (stars, description)
         const reposRes = await fetch('https://api.github.com/users/smouj/repos?per_page=100&sort=updated')
-        const repos = await reposRes.json()
+        const repos: RepoInfo[] = await reposRes.json()
         
-        const repoMap = new Map(repos.map((r: any) => [r.name, r]))
+        const repoMap = new Map<string, RepoInfo>()
+        repos.forEach((r: RepoInfo) => {
+          if (r && typeof r === 'object') {
+            repoMap.set(r.description ? 'hasDesc' : 'noDesc', r)
+          }
+        })
         
-        const skillData = manifest.skills.map((s: Skill) => {
+        // Use a different approach - index by repo name pattern
+        const skillData: Skill[] = manifest.skills.map((s: Skill) => {
           const fullRepoName = s.repo.replace('smouj/', '')
-          const repoInfo = repoMap.get(fullRepoName)
+          const repoInfo = repos.find((r: RepoInfo) => r && (r as any).name === fullRepoName)
           return {
             ...s,
-            description: repoInfo?.description || `${s.name} skill for OpenClaw`,
-            stars: repoInfo?.stargazers_count || 0,
+            description: (repoInfo as any)?.description || `${s.name} skill for OpenClaw`,
+            stars: (repoInfo as any)?.stargazers_count || 0,
           }
         })
         
@@ -101,7 +109,7 @@ export default function SkillsGallery() {
   
   const filteredSkills = skills.filter(skill => {
     const matchesSearch = skill.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         skill.description?.toLowerCase().includes(searchTerm.toLowerCase())
+                         (skill.description?.toLowerCase().includes(searchTerm.toLowerCase()) ?? false)
     const matchesTag = !selectedTag || skill.tag === selectedTag
     return matchesSearch && matchesTag
   })
@@ -111,7 +119,7 @@ export default function SkillsGallery() {
       <section id="skills" className="relative py-28 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="text-2xl animate-pulse" style={{ color: '#00D9FF' }}>
-            ⚡ Loading {156} skills...
+            ⚡ Loading skills...
           </div>
         </div>
       </section>
@@ -123,7 +131,6 @@ export default function SkillsGallery() {
       <div className="absolute inset-0 pointer-events-none grid-bg opacity-15" />
       
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -158,7 +165,6 @@ export default function SkillsGallery() {
           </motion.p>
         </div>
 
-        {/* Search & Filter */}
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -199,7 +205,6 @@ export default function SkillsGallery() {
           </div>
         </motion.div>
 
-        {/* Stats */}
         <div className="flex justify-center gap-6 mb-8 text-sm">
           <div className="flex items-center gap-2 text-gray-400">
             <span className="w-2 h-2 rounded-full bg-green-500"></span>
@@ -211,7 +216,6 @@ export default function SkillsGallery() {
           </div>
         </div>
 
-        {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {filteredSkills.map((skill, i) => {
             const color = categoryColors[skill.tag] || '#8B5CF6'
@@ -234,7 +238,6 @@ export default function SkillsGallery() {
                   border: '1px solid rgba(255,255,255,0.08)',
                 }}
               >
-                {/* Hover glow effect */}
                 <div 
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
@@ -242,9 +245,7 @@ export default function SkillsGallery() {
                   }}
                 />
 
-                {/* Content */}
                 <div className="relative z-10">
-                  {/* Top row: emoji + status */}
                   <div className="flex items-start justify-between mb-3">
                     <div 
                       className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl border"
@@ -267,12 +268,10 @@ export default function SkillsGallery() {
                     </span>
                   </div>
 
-                  {/* Title */}
                   <h3 className="text-white font-bold text-lg mb-1 group-hover:text-cyan-400 transition-colors">
                     {skill.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                   </h3>
 
-                  {/* Category tag */}
                   <div className="flex items-center gap-2 mb-3">
                     <span 
                       className="text-xs px-2 py-0.5 rounded-md capitalize"
@@ -288,18 +287,16 @@ export default function SkillsGallery() {
                     </span>
                   </div>
 
-                  {/* Description */}
                   <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-3">
                     {skill.description}
                   </p>
 
-                  {/* Footer */}
                   <div className="flex items-center justify-between pt-3 border-t border-white/5">
                     <div className="flex items-center gap-1 text-xs text-gray-500">
                       <span>→</span>
                       <span className="truncate max-w-[120px]">{skill.repo.replace('smouj/', '')}</span>
                     </div>
-                    {skill.stars > 0 && (
+                    {(skill.stars ?? 0) > 0 && (
                       <div className="flex items-center gap-1 text-xs text-gray-500">
                         <span>★</span>
                         <span>{skill.stars}</span>
@@ -312,14 +309,12 @@ export default function SkillsGallery() {
           })}
         </div>
 
-        {/* Empty state */}
         {filteredSkills.length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-500">No skills found matching your search.</p>
           </div>
         )}
 
-        {/* Footer CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
