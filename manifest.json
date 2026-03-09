@@ -1414,6 +1414,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "super-optimizer",
+      "repo": "smouj/super-optimizer-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "super",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
