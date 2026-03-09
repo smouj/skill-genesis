@@ -4,63 +4,88 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 interface Skill {
-  slug: string
   name: string
-  category: string
+  repo: string
   emoji: string
-  description: string
-  tags: string[]
-  color: string
+  tag: string
   status: string
+  version: string
+  defaultBranch: string
+  description?: string
+  stars?: number
 }
 
 const categoryColors: Record<string, string> = {
-  seo: '#8B00FF',
-  coding: '#FFD700',
-  devops: '#00FFCC',
-  security: '#FF6B6B',
-  writing: '#FF9F43',
-  analysis: '#A29BFE',
+  code: '#00D9FF',
+  seo: '#8B5CF6',
+  devops: '#10B981',
+  security: '#EF4444',
+  cloud: '#F59E0B',
+  data: '#EC4899',
+  infra: '#6366F1',
+  logic: '#14B8A6',
+  pattern: '#F97316',
+  test: '#22C55E',
+  api: '#3B82F6',
+  auto: '#A855F7',
+  meta: '#06B6D4',
+  bug: '#DC2626',
+  infra: '#8B5CF6',
 }
 
-const defaultEmojis: Record<string, string> = {
+const categoryEmojis: Record<string, string> = {
+  code: '💻',
   seo: '🔍',
-  coding: '💻',
-  devops: '🛠',
-  security: '🛡',
-  writing: '📖',
-  analysis: '📊',
+  devops: '🚀',
+  security: '🛡️',
+  cloud: '☁️',
+  data: '📊',
+  infra: '🏗️',
+  logic: '🧠',
+  pattern: '🔮',
+  test: '✅',
+  api: '🔌',
+  auto: '⚡',
+  meta: '📈',
+  bug: '🐛',
+}
+
+const statusColors: Record<string, { bg: string, text: string, border: string }> = {
+  Ready: { bg: 'rgba(34,197,94,0.12)', text: '#22C55E', border: 'rgba(34,197,94,0.25)' },
+  Beta: { bg: 'rgba(59,130,246,0.12)', text: '#3B82F6', border: 'rgba(59,130,246,0.25)' },
+  Alpha: { bg: 'rgba(168,85,247,0.12)', text: '#A855F7', border: 'rgba(168,85,247,0.25)' },
 }
 
 export default function SkillsGallery() {
   const [skills, setSkills] = useState<Skill[]>([])
-  const [hoveredSlug, setHoveredSlug] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedTag, setSelectedTag] = useState<string | null>(null)
 
   useEffect(() => {
     async function fetchSkills() {
       try {
-        const response = await fetch('https://api.github.com/users/smouj/repos?per_page=100&sort=updated')
-        const repos = await response.json()
+        // Fetch manifest for skills list
+        const manifestRes = await fetch('https://raw.githubusercontent.com/smouj/skill-genesis/main/manifest.json')
+        const manifest = await manifestRes.json()
         
-        const skillRepos = repos
-          .filter((r: any) => r.name.endsWith('-skill') && !r.fork)
-          .map((repo: any) => {
-            const slug = repo.name.replace('-skill', '')
-            const category = detectCategory(slug)
-            return {
-              slug,
-              name: formatName(slug),
-              category,
-              emoji: defaultEmojis[category] || '⚡',
-              description: repo.description || `"${slug} skill for OpenClaw"`,
-              tags: [category, 'openclaw', 'skill'],
-              color: categoryColors[category] || '#8B00FF',
-              status: 'Ready',
-            }
-          })
+        // Fetch repos for additional data (stars, description)
+        const reposRes = await fetch('https://api.github.com/users/smouj/repos?per_page=100&sort=updated')
+        const repos = await reposRes.json()
         
-        setSkills(skillRepos)
+        const repoMap = new Map(repos.map((r: any) => [r.name, r]))
+        
+        const skillData = manifest.skills.map((s: Skill) => {
+          const fullRepoName = s.repo.replace('smouj/', '')
+          const repoInfo = repoMap.get(fullRepoName)
+          return {
+            ...s,
+            description: repoInfo?.description || `${s.name} skill for OpenClaw`,
+            stars: repoInfo?.stargazers_count || 0,
+          }
+        })
+        
+        setSkills(skillData)
       } catch (error) {
         console.error('Failed to fetch skills:', error)
         setSkills([])
@@ -72,55 +97,44 @@ export default function SkillsGallery() {
     fetchSkills()
   }, [])
 
-  function detectCategory(slug: string): string {
-    const map: Record<string, string> = {
-      'seo': 'seo',
-      'code-review': 'coding',
-      'code-review-excellence': 'coding',
-      'db-optimize': 'devops',
-      'security-scan': 'security',
-      'api-docs': 'writing',
-      'test-gen': 'coding',
-      'log-analyze': 'analysis',
-      'backup-manager': 'devops',
-      'perf-monitor': 'devops',
-      'cloud-deploy': 'devops',
-      'image': 'design',
-      'weather': 'analysis',
-    }
-    return map[slug] || 'devops'
-  }
-
-  function formatName(slug: string): string {
-    return slug
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ')
-  }
+  const allTags = Array.from(new Set(skills.map(s => s.tag)))
+  
+  const filteredSkills = skills.filter(skill => {
+    const matchesSearch = skill.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         skill.description?.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesTag = !selectedTag || skill.tag === selectedTag
+    return matchesSearch && matchesTag
+  })
 
   if (loading) {
     return (
       <section id="skills" className="relative py-28 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="text-2xl" style={{ color: '#00FFCC' }}>⚡ Loading skills...</div>
+          <div className="text-2xl animate-pulse" style={{ color: '#00D9FF' }}>
+            ⚡ Loading {156} skills...
+          </div>
         </div>
       </section>
     )
   }
 
   return (
-    <section id="skills" className="relative py-28 px-4">
-      <div className="absolute inset-0 pointer-events-none grid-bg opacity-20" />
-      <div className="section-divider absolute top-0 left-8 right-8" />
-
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+    <section id="skills" className="relative py-20 px-4">
+      <div className="absolute inset-0 pointer-events-none grid-bg opacity-15" />
+      
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs uppercase tracking-widest mb-4"
-            style={{ border: '1px solid rgba(0,255,204,0.3)', color: '#00FFCC', background: 'rgba(0,255,204,0.06)' }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest mb-4"
+            style={{ 
+              border: '1px solid rgba(0,217,255,0.3)', 
+              color: '#00D9FF', 
+              background: 'rgba(0,217,255,0.06)' 
+            }}
           >
             <span>⚡</span> Skills Gallery
           </motion.div>
@@ -129,129 +143,211 @@ export default function SkillsGallery() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-black text-white mb-4"
           >
-            {skills.length} skills <span style={{ color: '#00FFCC' }}>ready to deploy</span>
+            {skills.length} <span style={{ color: '#00D9FF' }}>AI Skills</span> Ready
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
             className="text-gray-400 max-w-2xl mx-auto"
           >
-            Each skill is a full OpenClaw-compatible agent with bilingual documentation, real CLI commands, and expert-level guidance.
+            Autonomous AI agents for OpenClaw. Each skill is fully documented, bilingual (EN/ES), and ready to install.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-          {skills.map((skill, i) => {
-            const isHovered = hoveredSlug === skill.slug
-            const catColor = categoryColors[skill.category] ?? skill.color
+        {/* Search & Filter */}
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row gap-4 mb-8 items-center justify-center"
+        >
+          <input
+            type="text"
+            placeholder="Search skills..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full md:w-80 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400/50 transition-colors"
+          />
+          <div className="flex flex-wrap gap-2 justify-center">
+            <button
+              onClick={() => setSelectedTag(null)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                selectedTag === null 
+                  ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' 
+                  : 'bg-white/5 text-gray-400 border border-white/10 hover:border-white/20'
+              }`}
+            >
+              All
+            </button>
+            {allTags.slice(0, 8).map(tag => (
+              <button
+                key={tag}
+                onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium capitalize transition-all ${
+                  selectedTag === tag 
+                    ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' 
+                    : 'bg-white/5 text-gray-400 border border-white/10 hover:border-white/20'
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Stats */}
+        <div className="flex justify-center gap-6 mb-8 text-sm">
+          <div className="flex items-center gap-2 text-gray-400">
+            <span className="w-2 h-2 rounded-full bg-green-500"></span>
+            {skills.filter(s => s.status === 'Ready').length} Ready
+          </div>
+          <div className="flex items-center gap-2 text-gray-400">
+            <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
+            {allTags.length} Categories
+          </div>
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {filteredSkills.map((skill, i) => {
+            const color = categoryColors[skill.tag] || '#8B5CF6'
+            const emoji = categoryEmojis[skill.tag] || '⚡'
+            const status = statusColors[skill.status] || statusColors.Ready
+            
             return (
-              <motion.div
-                key={skill.slug}
-                initial={{ opacity: 0, y: 30 }}
+              <motion.a
+                key={skill.name}
+                href={`https://github.com/${skill.repo}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                onMouseEnter={() => setHoveredSlug(skill.slug)}
-                onMouseLeave={() => setHoveredSlug(null)}
-                className="relative p-4 rounded-2xl cursor-default overflow-hidden"
+                transition={{ delay: Math.min(i * 0.02, 0.5) }}
+                className="group relative block p-5 rounded-2xl overflow-hidden text-decoration-none"
                 style={{
-                  background: isHovered
-                    ? `radial-gradient(circle at top left, ${skill.color}12, rgba(255,255,255,0.03))`
-                    : 'rgba(255,255,255,0.02)',
-                  border: `1px solid ${isHovered ? skill.color + '45' : 'rgba(255,255,255,0.06)'}`,
-                  transform: isHovered ? 'translateY(-5px) scale(1.02)' : 'translateY(0) scale(1)',
-                  transition: 'all 0.28s ease',
-                  boxShadow: isHovered ? `0 16px 48px ${skill.color}20` : 'none',
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)',
+                  border: '1px solid rgba(255,255,255,0.08)',
                 }}
               >
-                <div
-                  className="text-2xl mb-3 w-11 h-11 flex items-center justify-center rounded-xl transition-transform duration-300"
+                {/* Hover glow effect */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
-                    background: `${skill.color}12`,
-                    border: `1px solid ${skill.color}25`,
-                    transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+                    background: `radial-gradient(circle at 50% 0%, ${color}15 0%, transparent 70%)`,
                   }}
-                >
-                  {skill.emoji}
-                </div>
+                />
 
-                <h3 className="text-white font-bold text-sm mb-1.5">{skill.name}</h3>
+                {/* Content */}
+                <div className="relative z-10">
+                  {/* Top row: emoji + status */}
+                  <div className="flex items-start justify-between mb-3">
+                    <div 
+                      className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl border"
+                      style={{
+                        background: `${color}10`,
+                        borderColor: `${color}20`,
+                      }}
+                    >
+                      {skill.emoji || emoji}
+                    </div>
+                    <span 
+                      className="text-xs px-2 py-1 rounded-full font-medium"
+                      style={{
+                        background: status.bg,
+                        color: status.text,
+                        border: `1px solid ${status.border}`,
+                      }}
+                    >
+                      {skill.status}
+                    </span>
+                  </div>
 
-                <div className="flex items-center gap-1.5 mb-3 flex-wrap">
-                  <span
-                    className="text-xs px-2 py-0.5 rounded-full"
-                    style={{
-                      background: `${catColor}12`,
-                      color: catColor,
-                      border: `1px solid ${catColor}25`,
-                    }}
-                  >
-                    {skill.category}
-                  </span>
-                  <span
-                    className="text-xs px-2 py-0.5 rounded-full"
-                    style={{ background: 'rgba(34,197,94,0.08)', color: '#22c55e', border: '1px solid rgba(34,197,94,0.18)' }}
-                  >
-                    {skill.status}
-                  </span>
-                </div>
+                  {/* Title */}
+                  <h3 className="text-white font-bold text-lg mb-1 group-hover:text-cyan-400 transition-colors">
+                    {skill.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  </h3>
 
-                <div
-                  style={{
-                    maxHeight: isHovered ? '100px' : '0',
-                    overflow: 'hidden',
-                    transition: 'max-height 0.35s ease, opacity 0.25s ease',
-                    opacity: isHovered ? 1 : 0,
-                  }}
-                >
-                  <p className="text-gray-400 text-xs leading-relaxed mb-2">{skill.description}</p>
-                  <div className="flex flex-wrap gap-1">
-                    {skill.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="text-xs" style={{ color: '#4b5563' }}>#{tag}</span>
-                    ))}
+                  {/* Category tag */}
+                  <div className="flex items-center gap-2 mb-3">
+                    <span 
+                      className="text-xs px-2 py-0.5 rounded-md capitalize"
+                      style={{
+                        background: `${color}10`,
+                        color: color,
+                      }}
+                    >
+                      {skill.tag}
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      v{skill.version}
+                    </span>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-3">
+                    {skill.description}
+                  </p>
+
+                  {/* Footer */}
+                  <div className="flex items-center justify-between pt-3 border-t border-white/5">
+                    <div className="flex items-center gap-1 text-xs text-gray-500">
+                      <span>→</span>
+                      <span className="truncate max-w-[120px]">{skill.repo.replace('smouj/', '')}</span>
+                    </div>
+                    {skill.stars > 0 && (
+                      <div className="flex items-center gap-1 text-xs text-gray-500">
+                        <span>★</span>
+                        <span>{skill.stars}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
-
-                <a
-                  href={`https://github.com/smouj/${skill.slug}-skill`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 text-xs flex items-center gap-1 transition-all duration-200"
-                  style={{ color: isHovered ? skill.color : '#374151' }}
-                >
-                  <span>→</span>
-                  <span>/{skill.slug}-skill</span>
-                </a>
-              </motion.div>
+              </motion.a>
             )
           })}
         </div>
 
+        {/* Empty state */}
+        {filteredSkills.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-500">No skills found matching your search.</p>
+          </div>
+        )}
+
+        {/* Footer CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 text-center"
+          className="mt-16 text-center"
         >
-          <p className="text-gray-500 text-sm mb-3">Generate your next skill with a single command:</p>
-          <div
-            className="inline-flex items-center gap-3 px-6 py-3 rounded-xl font-mono text-sm"
+          <p className="text-gray-500 text-sm mb-4">Create your own skill with:</p>
+          <code 
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-mono text-sm"
             style={{
-              background: 'rgba(0,0,0,0.6)',
-              border: '1px solid rgba(139,0,255,0.25)',
-              color: '#a855f7',
+              background: 'rgba(0,0,0,0.5)',
+              border: '1px solid rgba(0,217,255,0.2)',
+              color: '#00D9FF',
             }}
           >
-            <span style={{ color: '#22c55e' }}>$</span> python3 skill_genesis.py
-          </div>
+            <span style={{ color: '#22C55E' }}>$</span> python3 skill_genesis.py
+          </code>
         </motion.div>
       </div>
+
+      <style jsx>{`
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      `}</style>
     </section>
   )
 }
