@@ -1225,6 +1225,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "code-augur",
+      "repo": "smouj/code-augur-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
