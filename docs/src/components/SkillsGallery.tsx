@@ -15,11 +15,6 @@ interface Skill {
   stars?: number
 }
 
-interface RepoInfo {
-  description?: string
-  stargazers_count?: number
-}
-
 const categoryColors: Record<string, string> = {
   code: '#00D9FF',
   seo: '#8B5CF6',
@@ -60,6 +55,23 @@ const statusColors: Record<string, { bg: string, text: string, border: string }>
   Alpha: { bg: 'rgba(168,85,247,0.12)', text: '#A855F7', border: 'rgba(168,85,247,0.25)' },
 }
 
+const defaultDescriptions: Record<string, string> = {
+  code: 'Code analysis and generation skill',
+  seo: 'SEO optimization and audit skill',
+  devops: 'DevOps automation and deployment',
+  security: 'Security scanning and analysis',
+  cloud: 'Cloud infrastructure management',
+  data: 'Data processing and analytics',
+  infra: 'Infrastructure as code skill',
+  logic: 'Logic and reasoning skill',
+  pattern: 'Pattern detection and analysis',
+  test: 'Testing and QA automation',
+  api: 'API development and integration',
+  auto: 'Automation and orchestration',
+  meta: 'Metadata and tracking skill',
+  bug: 'Bug detection and fixing',
+}
+
 export default function SkillsGallery() {
   const [skills, setSkills] = useState<Skill[]>([])
   const [loading, setLoading] = useState(true)
@@ -72,24 +84,28 @@ export default function SkillsGallery() {
         const manifestRes = await fetch('https://raw.githubusercontent.com/smouj/skill-genesis/main/manifest.json')
         const manifest = await manifestRes.json()
         
-        const reposRes = await fetch('https://api.github.com/users/smouj/repos?per_page=100&sort=updated')
-        const repos: RepoInfo[] = await reposRes.json()
+        const reposRes = await fetch('https://api.github.com/users/smouj/repos?per_page=200&sort=updated')
+        const repos = await reposRes.json()
         
-        const repoMap = new Map<string, RepoInfo>()
-        repos.forEach((r: RepoInfo) => {
-          if (r && typeof r === 'object') {
-            repoMap.set(r.description ? 'hasDesc' : 'noDesc', r)
+        // Create a map indexed by lowercase repo name for faster lookup
+        const repoMap = new Map<string, any>()
+        repos.forEach((r: any) => {
+          if (r.name && r.name.endsWith('-skill')) {
+            repoMap.set(r.name.toLowerCase(), r)
           }
         })
         
-        // Use a different approach - index by repo name pattern
+        // Map skills with repo data
         const skillData: Skill[] = manifest.skills.map((s: Skill) => {
-          const fullRepoName = s.repo.replace('smouj/', '')
-          const repoInfo = repos.find((r: RepoInfo) => r && (r as any).name === fullRepoName)
+          const fullRepoName = `${s.name}-skill`
+          const repoInfo = repoMap.get(fullRepoName.toLowerCase())
+          
           return {
             ...s,
-            description: (repoInfo as any)?.description || `${s.name} skill for OpenClaw`,
-            stars: (repoInfo as any)?.stargazers_count || 0,
+            description: repoInfo?.description || 
+                        defaultDescriptions[s.tag] || 
+                        `${s.name.replace(/-/g, ' ')} skill for OpenClaw`,
+            stars: repoInfo?.stargazers_count || 0,
           }
         })
         
@@ -109,7 +125,8 @@ export default function SkillsGallery() {
   
   const filteredSkills = skills.filter(skill => {
     const matchesSearch = skill.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (skill.description?.toLowerCase().includes(searchTerm.toLowerCase()) ?? false)
+                         (skill.description?.toLowerCase().includes(searchTerm.toLowerCase()) ?? false) ||
+                         skill.tag.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesTag = !selectedTag || skill.tag === selectedTag
     return matchesSearch && matchesTag
   })
@@ -119,7 +136,7 @@ export default function SkillsGallery() {
       <section id="skills" className="relative py-28 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="text-2xl animate-pulse" style={{ color: '#00D9FF' }}>
-            ⚡ Loading skills...
+            ⚡ Loading {skills.length || 156} skills...
           </div>
         </div>
       </section>
@@ -189,7 +206,7 @@ export default function SkillsGallery() {
             >
               All
             </button>
-            {allTags.slice(0, 8).map(tag => (
+            {allTags.slice(0, 10).map(tag => (
               <button
                 key={tag}
                 onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
@@ -287,7 +304,7 @@ export default function SkillsGallery() {
                     </span>
                   </div>
 
-                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-3">
+                  <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-3">
                     {skill.description}
                   </p>
 
@@ -336,9 +353,9 @@ export default function SkillsGallery() {
       </div>
 
       <style jsx>{`
-        .line-clamp-2 {
+        .line-clamp-3 {
           display: -webkit-box;
-          -webkit-line-clamp: 2;
+          -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
