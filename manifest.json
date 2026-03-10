@@ -1432,6 +1432,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "choreo-maestro",
+      "repo": "smouj/choreo-maestro-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "choreo",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
