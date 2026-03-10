@@ -1450,6 +1450,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "dynamic-architect",
+      "repo": "smouj/dynamic-architect-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "dynamic",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
