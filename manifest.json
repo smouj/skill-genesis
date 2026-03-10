@@ -1423,6 +1423,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "infrastructure-poet",
+      "repo": "smouj/infrastructure-poet-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "infrastructure",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
