@@ -1477,6 +1477,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "test-mage",
+      "repo": "smouj/test-mage-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "test",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
