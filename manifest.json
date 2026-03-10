@@ -1468,6 +1468,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "smart-scanner",
+      "repo": "smouj/smart-scanner-skill",
+      "emoji": "\u26a1",
+      "tag": "smart",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
