@@ -1441,6 +1441,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "syntax-sorcerer",
+      "repo": "smouj/syntax-sorcerer-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "syntax",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
