@@ -1459,6 +1459,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "pixel-wizard",
+      "repo": "smouj/pixel-wizard-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "pixel",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
