@@ -1486,6 +1486,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "dynamic-maker",
+      "repo": "smouj/dynamic-maker-skill",
+      "emoji": "\u2728",
+      "tag": "dynamic",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
