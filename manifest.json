@@ -1540,6 +1540,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "code-refactorer",
+      "repo": "smouj/code-refactorer-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
