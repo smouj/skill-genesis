@@ -1549,6 +1549,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "code-poet",
+      "repo": "smouj/code-poet-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
