@@ -1495,6 +1495,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "auto-optimizer",
+      "repo": "smouj/auto-optimizer-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "auto",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
