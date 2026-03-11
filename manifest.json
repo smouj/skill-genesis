@@ -1531,6 +1531,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "rapid-architect",
+      "repo": "smouj/rapid-architect-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "rapid",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
