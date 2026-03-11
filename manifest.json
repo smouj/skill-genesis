@@ -1513,6 +1513,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "dream-coder",
+      "repo": "smouj/dream-coder-skill",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "tag": "dream",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
