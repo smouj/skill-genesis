@@ -1504,6 +1504,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "algo-wizard",
+      "repo": "smouj/algo-wizard-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "algo",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
