@@ -1585,6 +1585,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "pixel-artificer",
+      "repo": "smouj/pixel-artificer-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "pixel",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
