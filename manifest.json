@@ -1621,6 +1621,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "quantum-architect",
+      "repo": "smouj/quantum-architect-skill",
+      "emoji": "\u2728",
+      "tag": "quantum",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
