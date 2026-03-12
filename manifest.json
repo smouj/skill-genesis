@@ -1567,6 +1567,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "algo-forge",
+      "repo": "smouj/algo-forge-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "algo",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
