@@ -1612,6 +1612,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "api-sorcerer",
+      "repo": "smouj/api-sorcerer-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "api",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
