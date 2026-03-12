@@ -1576,6 +1576,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "code-wizard",
+      "repo": "smouj/code-wizard-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
