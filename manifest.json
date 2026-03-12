@@ -1558,6 +1558,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "code-ninja",
+      "repo": "smouj/code-ninja-skill",
+      "emoji": "\ud83c\udfaf",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
