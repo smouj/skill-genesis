@@ -1603,6 +1603,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "prime-crafter",
+      "repo": "smouj/prime-crafter-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "prime",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
