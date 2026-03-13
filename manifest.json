@@ -1648,6 +1648,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "omni-builder",
+      "repo": "smouj/omni-builder-skill",
+      "emoji": "\ud83d\ude80",
+      "tag": "omni",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
