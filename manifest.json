@@ -1666,6 +1666,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "meta-orchestrator",
+      "repo": "smouj/meta-orchestrator-skill",
+      "emoji": "\u2728",
+      "tag": "meta",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
