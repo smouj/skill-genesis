@@ -1684,6 +1684,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "dynamic-analyzer",
+      "repo": "smouj/dynamic-analyzer-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "dynamic",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
