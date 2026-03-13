@@ -1657,6 +1657,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": " turbo-architect",
+      "repo": "smouj/ turbo-architect-skill",
+      "emoji": "\u26a1",
+      "tag": " turbo",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
