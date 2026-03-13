@@ -1675,6 +1675,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "meta-architect",
+      "repo": "smouj/meta-architect-skill",
+      "emoji": "\ud83d\udd27",
+      "tag": "meta",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
