@@ -1693,6 +1693,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "code-illusionist",
+      "repo": "smouj/code-illusionist-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "code",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
