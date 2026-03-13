@@ -1639,6 +1639,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "cross-scanner",
+      "repo": "smouj/cross-scanner-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "cross",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
