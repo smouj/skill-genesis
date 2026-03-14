@@ -1738,6 +1738,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "bug-hunter",
+      "repo": "smouj/bug-hunter-skill",
+      "emoji": "\ud83e\udde0",
+      "tag": "bug",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
