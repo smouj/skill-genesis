@@ -1729,6 +1729,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "super-crafter",
+      "repo": "smouj/super-crafter-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "super",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
