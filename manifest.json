@@ -1702,6 +1702,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "prime-weaver",
+      "repo": "smouj/prime-weaver-skill",
+      "emoji": "\ud83d\udcca",
+      "tag": "prime",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
