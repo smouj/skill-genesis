@@ -1720,6 +1720,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "smart-builder",
+      "repo": "smouj/smart-builder-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "smart",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
