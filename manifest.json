@@ -1747,6 +1747,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "rapid-builder",
+      "repo": "smouj/rapid-builder-skill",
+      "emoji": "\ud83d\udca1",
+      "tag": "rapid",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
