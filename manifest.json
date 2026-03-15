@@ -1756,6 +1756,15 @@
       "status": "Ready",
       "version": "1.0.0",
       "defaultBranch": "main"
+    },
+    {
+      "name": "max-tracker",
+      "repo": "smouj/max-tracker-skill",
+      "emoji": "\ud83d\udd0d",
+      "tag": "max",
+      "status": "Ready",
+      "version": "1.0.0",
+      "defaultBranch": "main"
     }
   ]
 }
